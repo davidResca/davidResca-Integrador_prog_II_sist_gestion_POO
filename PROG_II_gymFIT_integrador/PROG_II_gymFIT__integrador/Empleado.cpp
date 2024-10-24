@@ -84,7 +84,7 @@ float Empleado::getUltimoSalario() const
 
 // mostrar
 void Empleado::mostrar() {
-	std::cout << "		EMPLEADA / O ID: " << getIdEmpleado() << std::endl;
+	std::cout << "EMPLEADA/O ID: " << getIdEmpleado() << std::endl;
 	std::cout << "*******************************" << std::endl;
 
 	Persona::mostrarPersona();

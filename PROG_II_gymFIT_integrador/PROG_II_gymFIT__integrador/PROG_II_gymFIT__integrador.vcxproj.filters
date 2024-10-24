@@ -24,10 +24,7 @@
     <ClInclude Include="Empleado.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Actividades.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Actividad.h">
+    <ClInclude Include="Profe.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,10 +41,7 @@
     <ClCompile Include="Empleado.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Actividades.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Actividad.cpp">
+    <ClCompile Include="Profe.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

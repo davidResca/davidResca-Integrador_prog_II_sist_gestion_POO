@@ -1,19 +1,17 @@
 #include <iostream>
 #include "Fecha.h"
 #include "Empleado.h"
+#include "Profe.h"
 
 
 int main() {
 	
+	Profe javi("javier", "montiel", 17634972, 55, 10, 3, 1978, "javi@javi.com", 746, 2,4,2024, 0, 20176349722, "profe musculacion", "Debe prestar mas atencion a sus alumnos/as", 500000, 9500);
 
-
-	/*try {
-		fecha = Fecha(29, 2, 2023);
-		std::cout << fecha << std::endl;
-	}
-	catch (const std::invalid_argument& e) {
-		std::cerr << "ooops... fecha incorrecta, asignare una fecha por default"<<std::endl;
-	}*/
+	javi.mostrar();
+	std::cout << std::endl;
+	Fecha nuevaFecha(10, 3, 1978);
+	std::cout << nuevaFecha;
 
 
 	return 0;

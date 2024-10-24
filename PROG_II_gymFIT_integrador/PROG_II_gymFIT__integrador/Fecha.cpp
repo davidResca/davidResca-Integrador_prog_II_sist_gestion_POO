@@ -13,7 +13,8 @@ Fecha::Fecha(int dia, int mes, int anio)
 
     validarIngreso(dia, mes, anio);
 }
-
+ 
+// getters
 int Fecha::getDia()
 {
     return _dia;
@@ -36,11 +37,14 @@ int Fecha::getCantidadDiasDelMes(int mes, int anio) {
     return cantidadDias;
 }
 
+// setters
 void Fecha::setFechaDefault() {
     _dia = 1;
     _mes = 1;
     _anio = 2023;
 }
+
+// validacion
 void Fecha::validarIngreso(int dia, int mes, int anio) {
     bool diaValido = esDiaValido(dia, mes, anio);
     bool mesValido = esMesValido(mes);
@@ -51,7 +55,6 @@ void Fecha::validarIngreso(int dia, int mes, int anio) {
         throw std::invalid_argument("Mensaje de error");
     }
 }
-
 bool Fecha::esAnioValido(int anio) {
     bool anioValido = false;
     if (anio >= 1) {
@@ -66,7 +69,6 @@ bool Fecha::esMesValido(int mes) {
     }
     return mesValido;
 }
-
 bool Fecha::esDiaValido(int dia, int mes, int anio)
 {
     bool esValido = false;
@@ -82,12 +84,15 @@ bool Fecha::esAnioBisiesto(int anio)
     bool esBisiesto = (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
     return esBisiesto;
 };
+
+// conversion
 std::string Fecha::toString() {
     return std::to_string(_dia).insert(0, 2 - std::to_string(_dia).length(), '0') + "/" +
         std::to_string(_mes).insert(0, 2 - std::to_string(_mes).length(), '0') + "/" +
         std::to_string(_anio);
 }
 
+// funcionalidad
 void Fecha::aumentarDia() {
     int cantidadDiasDelMes = getCantidadDiasDelMes(_mes, _anio);
 
@@ -104,7 +109,6 @@ void Fecha::aumentarDia() {
         _dia += 1;
     }
 }
-
 void Fecha::restarDia() {
     int cantidadDiasDelMes = getCantidadDiasDelMes(_mes, _anio);
 
