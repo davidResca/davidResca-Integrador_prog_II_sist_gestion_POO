@@ -14,16 +14,25 @@ private:
 public:
 	Persona();
 	Persona(std::string nombre, std::string apellido, int dni, int edad, int dia, int mes, int anio, std::string correoElectronico);
+	
+	// setters
 	void setNombre(std::string nombre);
 	void setApellido(std::string apellido);
 	void setDNI(int dni);
 	void setCorreoElectronico(std::string correoElectronico);
+	
+	// getters
 	std::string getNombre() const;
 	std::string getApellido() const;
 	int getDNI() const;
 	Fecha getFechaNacimiento() const;
 	int getEdad() const;
 	std::string getCorreoElectronico() const;
+
+	// interfaz
 	void mostrarPersona() const;
+	
+	//destructor
+	~Persona();
 };
 

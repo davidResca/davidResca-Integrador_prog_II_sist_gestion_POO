@@ -131,6 +131,10 @@ void Fecha::restarDia() {
     }
 }
 
+Fecha::~Fecha()
+{
+}
+
 // Implementación de la sobrecarga del operador <<
 std::ostream& operator<<(std::ostream& os, const Fecha& fecha) {
     os << fecha._dia << "/" << fecha._mes << "/" << fecha._anio;

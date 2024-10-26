@@ -21,12 +21,18 @@ public:
     Fecha();
     Fecha(int dia, int mes, int anio);
     std::string toString();
+
+    // getters
     int getDia();
     int getMes();
     int getAnio();
+
+    // modificadores
     void aumentarDia();
     void restarDia();
 
+    //destructor
+    ~Fecha();
 
     friend std::ostream& operator<<(std::ostream& os, const Fecha& fecha);
 };

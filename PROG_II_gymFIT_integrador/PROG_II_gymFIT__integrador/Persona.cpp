@@ -60,4 +60,8 @@ void Persona::mostrarPersona() const {
 	std::cout << "Edad: " << getEdad() << std::endl;
 	std::cout << "Fecha Nacimiento: " << getFechaNacimiento() << std::endl;
 	std::cout << "Correo electronico: " << getCorreoElectronico() << std::endl;
-};
+}
+Persona::~Persona()
+{
+}
+;

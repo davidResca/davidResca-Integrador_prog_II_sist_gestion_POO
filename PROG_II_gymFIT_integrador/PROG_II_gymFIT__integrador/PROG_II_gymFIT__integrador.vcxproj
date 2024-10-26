@@ -130,6 +130,7 @@
     <ClInclude Include="Actividad.h" />
     <ClInclude Include="Alumno.h" />
     <ClInclude Include="Clase.h" />
+    <ClInclude Include="DiaHorario.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="Persona.h" />
@@ -139,6 +140,7 @@
     <ClCompile Include="Actividad.cpp" />
     <ClCompile Include="Alumno.cpp" />
     <ClCompile Include="Clase.cpp" />
+    <ClCompile Include="DiaHorario.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="main.cpp" />

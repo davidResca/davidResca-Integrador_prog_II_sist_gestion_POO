@@ -1,14 +1,36 @@
 #include "Profe.h"
 
 
-
-Profe::Profe(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, int CUIT, const std::string& observaciones, float ultimoSalario, float salarioHora) 
-	: Empleado(nombre,apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones, ultimoSalario)
+// constructores
+Profe::Profe() : Empleado() {
+	_idProfe = -1;
+	_salarioHora = .0f;
+}
+Profe::Profe(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, int CUIT, const std::string& observaciones, int idProfe, float salarioHora)
+	: Empleado(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones)
 {
+	_idProfe = idProfe;
 	_salarioHora = salarioHora;
 }
 
-float Profe::getSalarioHora()
+// setters
+void Profe::setSalarioHora(float salarioHora)
 {
+	_salarioHora = salarioHora;
+}
+void Profe::setIdProfe(int idProfe)
+{
+	_idProfe = idProfe;
+}
+
+// getters
+int Profe::getIdProfe() const {
+	return _idProfe;
+}
+float Profe::getSalarioHora() const {
 	return _salarioHora;
+}
+
+Profe::~Profe()
+{
 }

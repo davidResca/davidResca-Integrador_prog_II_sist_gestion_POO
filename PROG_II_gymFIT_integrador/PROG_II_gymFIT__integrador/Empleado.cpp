@@ -9,16 +9,14 @@ Empleado::Empleado() : Persona() {
 	_horasTrabajadas = .0f;
 	_CUIT = 0;
 	strcpy_s(_observaciones, sizeof(_observaciones), valorDefault.c_str());
-	_ultimoSalario = .0f;
 };
-Empleado::Empleado(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, int CUIT, const std::string& observaciones, float ultimoSalario)
+Empleado::Empleado(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, int CUIT, const std::string& observaciones)
 	: Persona(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico)
 {
 	_fechaAlta = Fecha(diaAlta, mesAlta, anioAlta);
 	_horasTrabajadas = horasTrabajadas;
 	_CUIT = CUIT;
-	strcpy_s(_observaciones, sizeof(_observaciones), observaciones.c_str());
-	_ultimoSalario = ultimoSalario;
+	strcpy_s(_observaciones, sizeof(_observaciones), observaciones.c_str()); 
 }
 
 // setters
@@ -39,10 +37,6 @@ void Empleado::setObservaciones(std::string observaciones)
 {
 	strcpy_s(_observaciones, sizeof(_observaciones), observaciones.c_str());
 }
-void Empleado::setUltimoSalario(float salario)
-{
-	_ultimoSalario = salario;
-}
 
 // getters
 Fecha Empleado::getFechaAlta() const
@@ -62,10 +56,6 @@ std::string Empleado::getObservaciones() const
 {
 	return _observaciones;
 }
-float Empleado::getUltimoSalario() const
-{
-	return _ultimoSalario;
-}
 
 // mostrar
 void Empleado::mostrar() {
@@ -76,5 +66,8 @@ void Empleado::mostrar() {
 	std::cout << "Fecha: " << getFechaAlta() << std::endl;
 	std::cout << "Horas registradas: " << getHorasTrabajadas() << std::endl;
 	std::cout << "Observaciones: " << getObservaciones() << std::endl;
-	std::cout << "Ultimo salario: " << getUltimoSalario() << std::endl;
+}
+
+Empleado::~Empleado()
+{
 }

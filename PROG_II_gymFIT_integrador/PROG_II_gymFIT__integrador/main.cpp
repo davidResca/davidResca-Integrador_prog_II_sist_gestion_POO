@@ -1,8 +1,11 @@
 #include <iostream>
+#include "DiaHorario.h"
 #include "Fecha.h"
+#include "Clase.h"
 #include "Empleado.h"
 #include "Profe.h"
 #include "Alumno.h"
+
 
 
 int main() {

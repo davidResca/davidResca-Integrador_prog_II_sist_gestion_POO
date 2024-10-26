@@ -1,6 +1,6 @@
 #pragma once
-#include <cstring>;
-#include <string>;
+#include <cstring>
+#include <string>
 
 class Actividad
 {
