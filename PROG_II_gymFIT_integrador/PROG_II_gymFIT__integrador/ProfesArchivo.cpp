@@ -2,7 +2,7 @@
 #include "ProfesArchivo.h"
 
 ProfesArchivo::ProfesArchivo(int tamanioRegistro) {
-	_ruta = "profes.dat";
+	_ruta = "archivos/profes.dat";
 	_tamReg = tamanioRegistro;
 }
 

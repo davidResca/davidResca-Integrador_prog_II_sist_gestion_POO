@@ -13,23 +13,33 @@
 #include "DiaHoraArchivo.h"
 
 
-
-template<typename T, typename Archivo>
-bool darAltaRegistro(T& reg){
-    Archivo archivo(sizeof(T));
-    reg.mostrar();
-    system("pause");
-    return archivo.guardar(reg);
+template <typename T>
+bool darAltaRegistro(IArchivable<T>& archivo, T& reg) {
+	return archivo.guardar(reg);
 }
 
+template<typename T>
+void mostrarListarRegistros(IArchivable<T>& archivo) {
+	archivo.listarRegistro();
+	system("pause");
+}
 
 int main() {
+	//           nombre, apellido, dni,    edad, fecha nac   ,  correoElectronico, fecha  Alta,hTrab, CUIT,  observaciones,idProfe, salarioHora
+	Profe laura("laura", "pavese", 35450984, 35, 20, 12, 1989, "lau@profesgym.com", 4, 4, 2023, 345, 14354509849, "Excelente", 2, 9500);
+	ProfesArchivo archivo(sizeof(Profe));
+	bool exito;
+	exito = darAltaRegistro(archivo, laura);
+	mostrarListarRegistros(archivo);
+	std::cout << exito << std::endl;
 
-    Profe laura("laura", "pavese", 35450984, 35, 20, 12, 1989, "lau@profesgym.com", 4, 4, 2023, 345, 14354509849, "Excelente", 2, 9500);
-    darAltaRegistro<Profe, ProfesArchivo>(laura);
-
-
-
+	//std::cout << "-----------------------------------------------" << std::endl;
+	DiaHoraArchivo archivoDiaHorario(sizeof(DiaHorario));
+	//				   (idClase, idProfe,diaSemana, horaInicio, horaFin)
+	DiaHorario rpmLunes(2, 2, "lunes", 15, 16);
+	darAltaRegistro(archivoDiaHorario, rpmLunes);
+	mostrarListarRegistros(archivoDiaHorario);
+	//std::cout << "-----------------------------------------------" << std::endl;
 
 
 	return 0;

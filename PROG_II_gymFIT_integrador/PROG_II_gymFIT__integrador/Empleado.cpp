@@ -59,9 +59,6 @@ std::string Empleado::getObservaciones() const
 
 // mostrar
 void Empleado::mostrar() {
-	std::cout << "*******************************" << std::endl;
-	std::cout << "***********EMPLEADOS***********" << std::endl;
-	std::cout << "*******************************" << std::endl;
 	Persona::mostrarPersona();
 	std::cout << "Fecha: " << getFechaAlta() << std::endl;
 	std::cout << "Horas registradas: " << getHorasTrabajadas() << std::endl;

@@ -1,7 +1,7 @@
 #include "ClasesArchivo.h"
 
 ClasesArchivo::ClasesArchivo(int tamanioRegistro) {
-    _ruta = "clases.dat";
+    _ruta = "archivos/clases.dat";
     _tamReg = tamanioRegistro;
 }
 

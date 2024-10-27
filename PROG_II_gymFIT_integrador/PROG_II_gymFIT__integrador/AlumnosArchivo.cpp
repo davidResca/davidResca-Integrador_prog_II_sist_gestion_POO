@@ -2,7 +2,7 @@
 #include "AlumnosArchivo.h"
 
 ArchivoAlumnos::ArchivoAlumnos(int tamanioRegistro) {
-	_ruta = "alumnos.dat";
+	_ruta = "archivos/alumnos.dat";
 	_tamReg = tamanioRegistro;
 }
 bool ArchivoAlumnos::listarRegistro() const {

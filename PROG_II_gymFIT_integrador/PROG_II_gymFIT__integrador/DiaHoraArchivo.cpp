@@ -1,7 +1,7 @@
 #include "DiaHoraArchivo.h"
 
 DiaHoraArchivo::DiaHoraArchivo(int tamanioRegistro) {
-    _ruta = "diahorario.dat";
+    _ruta = "archivos/diahorario.dat";
     _tamReg = tamanioRegistro;
 }
 

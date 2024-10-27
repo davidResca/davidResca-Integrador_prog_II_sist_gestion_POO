@@ -20,4 +20,5 @@ public:
 	int buscar(int id) const override;
 	int contarRegistros() const override;
 	bool modificarRegistro(const Clase& reg, int pos) const override;
+	~ClasesArchivo() override {};
 };
