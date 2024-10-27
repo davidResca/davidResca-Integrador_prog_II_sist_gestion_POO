@@ -5,6 +5,7 @@
 #include "Empleado.h"
 #include "Profe.h"
 #include "Alumno.h"
+#include "AlumnosArchivo.h"
 
 
 
