@@ -1,13 +1,12 @@
 #include "Clase.h"
 
-
 // constructor
-Clase::Clase() {
+Clase::Clase() : Actividad() {
 	_idProfe = -1;
 	_idClase = -1;
 	_cantidadInscriptos = -1;
 }
-Clase::Clase(int idProfe, int idClase, int cantidadInscriptos) {
+Clase::Clase(std::string nombreActividad, int idLugarDeDesarrollo, int idProfe, int idClase, int cantidadInscriptos) : Actividad(nombreActividad, idLugarDeDesarrollo) {
 	_idProfe = idProfe;
 	_idClase = idClase;
 	_cantidadInscriptos = cantidadInscriptos;
@@ -27,8 +26,15 @@ int Clase::getIdProfe() const
 	return _idProfe;
 }
 
-Clase::~Clase()
-{
+// interfaz
+void Clase::mostrarClase() const {
+	Actividad::mostrarActividad();
+	std::cout << std::endl;
+	std::cout << "Clase: " << getIdClase() << std::endl;
+	std::cout << "Cantidad de inscriptos: " << getCantidadInscriptos() << std::endl;
+	std::cout << "Profe: " << getIdProfe() << std::endl;
 }
+
+Clase::~Clase() {};
 
 // setters

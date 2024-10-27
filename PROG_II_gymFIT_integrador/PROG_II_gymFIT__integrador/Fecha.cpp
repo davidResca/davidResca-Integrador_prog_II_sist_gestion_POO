@@ -92,7 +92,7 @@ std::string Fecha::toString() {
         std::to_string(_anio);
 }
 
-// funcionalidad
+// contadores
 void Fecha::aumentarDia() {
     int cantidadDiasDelMes = getCantidadDiasDelMes(_mes, _anio);
 
@@ -135,7 +135,7 @@ Fecha::~Fecha()
 {
 }
 
-// Implementación de la sobrecarga del operador <<
+// Imp. sobrecarga del operador <<
 std::ostream& operator<<(std::ostream& os, const Fecha& fecha) {
     os << fecha._dia << "/" << fecha._mes << "/" << fecha._anio;
     return os;

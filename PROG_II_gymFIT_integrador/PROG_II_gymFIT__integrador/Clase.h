@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "DiaHorario.h"
 #include "Actividad.h"
 
@@ -11,10 +12,13 @@ private:
     int _cantidadInscriptos;
 public:
     Clase();
-    Clase(int idProfe, int idClase, int cantidadInscriptos);
+    Clase(std::string nombreActividad, int idLugarDeDesarrollo,int idProfe, int idClase, int cantidadInscriptos);
     int getIdClase() const;
     int getCantidadInscriptos() const;
     int getIdProfe() const;
+
+    // interfaz
+    void mostrarClase() const;
 
     ~Clase();
 };

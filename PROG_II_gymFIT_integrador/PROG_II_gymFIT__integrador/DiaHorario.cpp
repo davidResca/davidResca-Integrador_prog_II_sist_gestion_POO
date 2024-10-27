@@ -2,26 +2,32 @@
 
 //constructores
 DiaHorario::DiaHorario() {
-    _idActividad = -1;
+    _idClase = -1;
+    _idProfe = -1;
     _diaSemana = lunes;
     _horaInicio = -1;
     _horaFin = -1;
 }
-DiaHorario::DiaHorario(int idActividad, DiaSemana diaSemana, int horaInicio, int horaFin) {
-    _idActividad = idActividad;
-    _diaSemana = diaSemana;
+DiaHorario::DiaHorario(int idClase, int idProfe, std::string diaSemana, int horaInicio, int horaFin) {
+    _idClase = idClase;
+    _idProfe = idProfe;
+    _diaSemana = convertirStringADia(diaSemana);
     _horaInicio = horaInicio;
     _horaFin = horaFin;
 }
 
 // getters
+int DiaHorario::getIdClase() const {
+    return _idClase;
+}
+int DiaHorario::getIdProfe() const
+{
+    return _idProfe;
+}
 std::string DiaHorario::getDiaSemana() const {
     std::string dia = convertirDiaAString(_diaSemana);
-    
+
     return dia;
-}
-int DiaHorario::getIdActividad() const {
-    return _idActividad;
 }
 int DiaHorario::getHoraInicio() const {
     return _horaInicio;
@@ -31,6 +37,12 @@ int DiaHorario::getHoraFin() const {
 }
 
 // setters
+void DiaHorario::setIdClase(int idClase) {
+    _idClase = idClase;
+}
+void DiaHorario::setIdProfe(int idProfe) {
+    _idProfe = idProfe;
+}
 void DiaHorario::setDiaSemana(const std::string& diaSemana) {
     _diaSemana = convertirStringADia(diaSemana);
 }
@@ -44,12 +56,11 @@ void DiaHorario::setHoraFin(int horaFin) {
 
 // conversores
 DiaHorario::DiaSemana DiaHorario::convertirStringADia(const std::string& diaStr) {
-    std::string lowerStr = diaStr; // Copia de la cadena
+    std::string lowerStr = diaStr; 
 
-    // Convertir a minúsculas
     convertirAMinusculas(lowerStr);
 
-    // Comparar y retornar el valor del enum
+    // Compara y retorna el valor del enum
     if (lowerStr == "lunes") return lunes;
     else if (lowerStr == "martes") return martes;
     else if (lowerStr == "miercoles") return miercoles;
@@ -77,8 +88,13 @@ void DiaHorario::convertirAMinusculas(std::string& dia) {
     }
 }
 
-// destructor
-DiaHorario::~DiaHorario()
-{
+// interfaz 
+void DiaHorario::mostrarDiaHorario() const {
+    std::cout << "id Clase: " << getIdClase();
+    std::cout << "Hora Comienzo: " << getHoraInicio();
+    std::cout << "Hora Fin: " << getHoraFin();
 }
+
+// destructor
+DiaHorario::~DiaHorario() {};
 

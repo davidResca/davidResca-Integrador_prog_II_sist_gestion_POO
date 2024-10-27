@@ -35,7 +35,7 @@ bool ArchivoAlumnos::guardar(const Alumno& reg) const {
 
 	return result;
 }
-int ArchivoAlumnos::buscar(int idAlumno)const {
+int ArchivoAlumnos::buscar(int id) const {
 	FILE* pAlumno;
 	Alumno reg;
 	int pos = 0;
@@ -44,18 +44,17 @@ int ArchivoAlumnos::buscar(int idAlumno)const {
 		return -2;
 	}
 	while (fread(&reg, _tamReg, 1, pAlumno) == 1) {
-		if (reg.getIdAlumno() == idAlumno && reg.getEstado()) {
+		if (reg.getIdAlumno() == id && reg.getEstado()) { 
 			fclose(pAlumno);
 			return pos;
-		};
+		}
 		pos++;
 	};
 
 	fclose(pAlumno);
 	return -1;
 }
-int ArchivoAlumnos::contarRegistros()const
-{
+int ArchivoAlumnos::contarRegistros() const {
 	FILE* pAlumno;
 	Alumno reg;
 	pAlumno = fopen(_ruta.c_str(), "rb");
@@ -63,14 +62,13 @@ int ArchivoAlumnos::contarRegistros()const
 		return 0;
 	}
 
-	fseek(pAlumno, 0, SEEK_END); // puntero al final del reg
-	int total = ftell(pAlumno); // cantidad de bytes en registro
+	fseek(pAlumno, 0, SEEK_END); 
+	int total = ftell(pAlumno); 
 
 	fclose(pAlumno);
 	return total / _tamReg;
 }
-bool ArchivoAlumnos::modificarRegistro(const Alumno& reg, int pos)const
-{
+bool ArchivoAlumnos::modificarRegistro(const Alumno& reg, int pos) const {
 	FILE* pAlumno;
 	pAlumno = fopen(_ruta.c_str(), "rb+");
 	if (pAlumno == nullptr) {
@@ -82,7 +80,7 @@ bool ArchivoAlumnos::modificarRegistro(const Alumno& reg, int pos)const
 	fclose(pAlumno);
 	return escribio;
 }
-Alumno ArchivoAlumnos::leerRegistro(int ubi)const {
+Alumno ArchivoAlumnos::leerRegistro(int ubi) const {
 	FILE* pAlumno;
 	Alumno reg;
 	pAlumno = fopen(_ruta.c_str(), "rb");

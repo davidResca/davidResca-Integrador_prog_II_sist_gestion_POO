@@ -19,11 +19,7 @@ public:
     float getSalarioHora() const;
   
     // interfaz
-    void mostrar() {
-        Empleado::mostrar();
-        std::cout << "id profe: " << getIdProfe();
-        std::cout << "Salario por hora: " << getSalarioHora();
-    }
+    void mostrarProfe();
 
     //destructor
     ~Profe();

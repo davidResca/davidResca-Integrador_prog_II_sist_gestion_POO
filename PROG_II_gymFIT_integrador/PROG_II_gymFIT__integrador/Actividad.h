@@ -5,18 +5,23 @@
 class Actividad
 {
 private:
-	int _idActividad;
-	char _nombreActividad[20];
+	static const std::string defaultValue;
+	char _nombreActividad[100];
 	int _idLugarDeDesarrollo;
 public:
-	void setIdActividad(int idActividad);
+	// constructores
+	Actividad();
+	Actividad(std::string nombreActividad, int idLugarDeDesarrollo);
+	
+	// getters
+	std::string getNombreActividad() const;
+	int getIdLugarDeDesarrollo() const;
+
+	// setters
 	void setNombreActividad(std::string actividad);
 	void setIdLugarDeDesarrollo(int id);
 	
-	int getIdActividad();
-	std::string getNombreActividad();
-	int getIdLugarDeDesarrollo();
-
-		
+	// interfaz
+	void mostrarActividad() const;
 };
 

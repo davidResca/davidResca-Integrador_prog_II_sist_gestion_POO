@@ -106,4 +106,4 @@ void Alumno::mostrar() {
 }
 
 // destructor
-Alumno::~Alumno() {}
+Alumno::~Alumno() {};

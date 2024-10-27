@@ -68,6 +68,4 @@ void Empleado::mostrar() {
 	std::cout << "Observaciones: " << getObservaciones() << std::endl;
 }
 
-Empleado::~Empleado()
-{
-}
+Empleado::~Empleado() {};

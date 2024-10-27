@@ -1,6 +1,5 @@
 #include "Profe.h"
 
-
 // constructores
 Profe::Profe() : Empleado() {
 	_idProfe = -1;
@@ -31,6 +30,12 @@ float Profe::getSalarioHora() const {
 	return _salarioHora;
 }
 
-Profe::~Profe()
-{
+// interfaz
+void Profe::mostrarProfe() {
+	Empleado::mostrar();
+	std::cout << "id profe: " << getIdProfe() << std::endl;
+	std::cout << "Salario por hora: " << getSalarioHora() << std::endl;
 }
+
+//destructor
+Profe::~Profe() {};

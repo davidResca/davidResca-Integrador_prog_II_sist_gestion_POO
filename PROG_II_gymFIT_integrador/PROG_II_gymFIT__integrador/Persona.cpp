@@ -61,7 +61,4 @@ void Persona::mostrarPersona() const {
 	std::cout << "Fecha Nacimiento: " << getFechaNacimiento() << std::endl;
 	std::cout << "Correo electronico: " << getCorreoElectronico() << std::endl;
 }
-Persona::~Persona()
-{
-}
-;
+Persona::~Persona() {};
