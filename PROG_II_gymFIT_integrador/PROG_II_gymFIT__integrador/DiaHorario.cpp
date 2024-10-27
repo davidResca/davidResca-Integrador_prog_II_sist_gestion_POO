@@ -90,9 +90,9 @@ void DiaHorario::convertirAMinusculas(std::string& dia) {
 
 // interfaz 
 void DiaHorario::mostrarDiaHorario() const {
-    std::cout << "id Clase: " << getIdClase();
-    std::cout << "Hora Comienzo: " << getHoraInicio();
-    std::cout << "Hora Fin: " << getHoraFin();
+    std::cout << "id Clase: " << getIdClase() << std::endl;
+    std::cout << "Hora Comienzo: " << getHoraInicio() << std::endl;
+    std::cout << "Hora Fin: " << getHoraFin() << std::endl;
 }
 
 // destructor
