@@ -1,4 +1,0 @@
-﻿  main.cpp
-E:\UTN\PROG II\PROG_II_gymFIT_integrador\PROG_II_gymFIT__integrador\main.cpp(36,99): warning C4305: 'argumento': truncamiento de '__int64' a 'int'
-E:\UTN\PROG II\PROG_II_gymFIT_integrador\PROG_II_gymFIT__integrador\main.cpp(36,99): warning C4309: 'argumento': truncamiento de valor constante
-  PROG_II_gymFIT__integrador.vcxproj -> E:\UTN\PROG II\PROG_II_gymFIT_integrador\x64\Debug\PROG_II_gymFIT__integrador.exe
