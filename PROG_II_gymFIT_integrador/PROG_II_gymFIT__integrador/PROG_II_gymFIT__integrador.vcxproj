@@ -132,6 +132,7 @@
     <ClInclude Include="AlumnosArchivo.h" />
     <ClInclude Include="Clase.h" />
     <ClInclude Include="ClasesArchivo.h" />
+    <ClInclude Include="ClasesGestion.h" />
     <ClInclude Include="DiaHoraArchivo.h" />
     <ClInclude Include="DiaHorario.h" />
     <ClInclude Include="Empleado.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="AlumnosArchivo.cpp" />
     <ClCompile Include="Clase.cpp" />
     <ClCompile Include="ClasesArchivo.cpp" />
+    <ClCompile Include="ClasesGestion.cpp" />
     <ClCompile Include="DiaHoraArchivo.cpp" />
     <ClCompile Include="DiaHorario.cpp" />
     <ClCompile Include="Empleado.cpp" />
@@ -155,6 +157,9 @@
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Profe.cpp" />
     <ClCompile Include="ProfesArchivo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

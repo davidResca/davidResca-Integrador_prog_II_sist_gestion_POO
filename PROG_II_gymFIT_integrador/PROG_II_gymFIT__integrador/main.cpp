@@ -11,6 +11,7 @@
 #include "ClasesArchivo.h"
 #include "DiaHorario.h"
 #include "DiaHoraArchivo.h"
+//#include "ClasesGestion.h"
 
 
 template <typename T>
@@ -24,11 +25,16 @@ void mostrarListarRegistros(IArchivable<T>& archivo) {
 	system("pause");
 }
 
+
+//template<typename T>
+//T buscarRegistro(int ubi)
+
 int main() {
-	//           nombre, apellido, dni,    edad, fecha nac   ,  correoElectronico, fecha  Alta,hTrab, CUIT,  observaciones,idProfe, salarioHora
+	bool exito;
+	
+	//nombre, apellido, dni,    edad, fecha nac   ,  correoElectronico , fecha  Alta, hTrab, CUIT,  observaciones,idProfe, salarioHora
 	Profe laura("laura", "pavese", 35450984, 35, 20, 12, 1989, "lau@profesgym.com", 4, 4, 2023, 345, 14354509849, "Excelente", 2, 9500);
 	ProfesArchivo archivo(sizeof(Profe));
-	bool exito;
 	exito = darAltaRegistro(archivo, laura);
 	mostrarListarRegistros(archivo);
 	std::cout << exito << std::endl;
@@ -42,13 +48,65 @@ int main() {
 	//std::cout << "-----------------------------------------------" << std::endl;
 
 
+	std::cout << "-----------------------------------------------" << std::endl;
+	ArchivoAlumnos archivoAlumnos(sizeof(Alumno));
+	//				nombre, apellido,   dni,   edad, Fecha Nac, correoElectronico, id , FechaInsc, idMembresia, estado
+	Alumno alumno1("matias", "peretti", 39882345, 26, 4, 4, 1996, "mati@matias.com", 234, 6, 8, 2024, 5, true);
+	exito = darAltaRegistro(archivoAlumnos, alumno1);
+	mostrarListarRegistros(archivoAlumnos);
+	std::cout << "-----------------------------------------------" << std::endl;
+
+	
+
+
+
 	return 0;
 }
 
-
-
-
-
+//
+//void mostrarMenuPrincipal() {
+//	bool salir = false;
+//	while (!salir) {
+//		int opcion;
+//		bool salir = false;
+//		while (!salir) {
+//			std::cout << "SITEMA GymFist" << std::endl;
+//			std::cout << std::endl;
+//			std::cout << "OPCIONES" << std::endl;
+//			std::cout << "1) GESTION EMPLEADOS" << std::endl;
+//			std::cout << "2) GESTION CLASES" << std::endl;
+//			std::cout << std::endl;
+//			std::cout << "0) Salir" << std::endl;
+//			std::cout << std::endl;
+//			std::cout << "Elija una opcion: ";
+//			std::cin >> opcion;
+//
+//			switch (opcion) {
+//			case 1:
+//				
+//				break;
+//			case 2:
+//				break;
+//			case 3:
+//
+//				break;
+//			case 4:
+//
+//				break;
+//			case 0:
+//				salir = true;
+//				break;
+//			default:
+//				std::cout << "OPCION INCORRECTA." << std::endl;
+//				system("pause");
+//				break;
+//			}
+//			system("cls");
+//		}
+//	}
+//}
+//
+//
 
 
 
