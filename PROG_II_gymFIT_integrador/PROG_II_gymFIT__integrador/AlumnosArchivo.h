@@ -17,7 +17,7 @@ public:
 	bool listarRegistro() const override;
 	bool guardar(const Alumno& reg) const override;
 	int buscar(int id) const override;
-	int contarRegistros() const override;
+	int contarRegistros() const override;  
 	bool modificarRegistro(const Alumno& reg, int pos) const override;
 	~ArchivoAlumnos() override {};
 };

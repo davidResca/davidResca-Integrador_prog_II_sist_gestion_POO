@@ -8,23 +8,23 @@ private:
 	static const std::string valorDefault;
 	Fecha _fechaAlta;
 	float _horasTrabajadas;
-	int _CUIT;
+	long long _CUIT;
 	char _observaciones[200];
 public:
 	// constructor
 	Empleado();
-	Empleado(std::string nombre,std::string apellido,int dni,int edad,int diaNasc,int mesNasc,int anioNasc,std::string correoElectronico,int diaAlta,int mesAlta,int anioAlta,float horasTrabajadas,int CUIT,const std::string& observaciones);
+	Empleado(std::string nombre,std::string apellido,long long dni,int edad,int diaNasc,int mesNasc,int anioNasc,std::string correoElectronico,int diaAlta,int mesAlta,int anioAlta,float horasTrabajadas,long long CUIT,const std::string& observaciones);
 
 	//setters
 	void setFechaAlta(int dia, int mes, int anio);
 	void setHorasTrabajadas(float horas);
-	void setCUIT(int CUIT);
+	void setCUIT(long long CUIT);
 	void setObservaciones(std::string observaciones);
 
 	//getters
 	Fecha getFechaAlta() const;
 	float getHorasTrabajadas() const;
-	int getCUIT() const;
+	long long getCUIT() const;
 	std::string getObservaciones() const;
 
 	//mostrar

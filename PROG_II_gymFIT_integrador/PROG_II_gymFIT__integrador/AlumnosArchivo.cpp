@@ -7,7 +7,7 @@ ArchivoAlumnos::ArchivoAlumnos(int tamanioRegistro) {
 }
 bool ArchivoAlumnos::listarRegistro() const {
 	Alumno reg;
-	FILE* pAlumno;
+	FILE* pAlumno; 
 
 	pAlumno = fopen(_ruta.c_str(), "rb");
 	if (pAlumno == nullptr) {

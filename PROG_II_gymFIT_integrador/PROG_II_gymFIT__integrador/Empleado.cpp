@@ -10,7 +10,7 @@ Empleado::Empleado() : Persona() {
 	_CUIT = 0;
 	strcpy_s(_observaciones, sizeof(_observaciones), valorDefault.c_str());
 };
-Empleado::Empleado(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, int CUIT, const std::string& observaciones)
+Empleado::Empleado(std::string nombre, std::string apellido, long long dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, long long CUIT, const std::string& observaciones)
 	: Persona(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico)
 {
 	_fechaAlta = Fecha(diaAlta, mesAlta, anioAlta);
@@ -28,7 +28,7 @@ void Empleado::setHorasTrabajadas(float horas)
 {
 	_horasTrabajadas = horas;
 }
-void Empleado::setCUIT(int CUIT)
+void Empleado::setCUIT(long long CUIT)
 {
 	_CUIT = CUIT;
 }
@@ -47,7 +47,7 @@ float Empleado::getHorasTrabajadas() const
 {
 	return _horasTrabajadas;
 }
-int Empleado::getCUIT() const
+long long Empleado::getCUIT() const
 {
 	return _CUIT;
 }

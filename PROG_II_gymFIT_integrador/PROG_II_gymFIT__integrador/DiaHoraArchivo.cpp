@@ -43,19 +43,19 @@ int DiaHoraArchivo::buscar(int id) const {
 
     pDiaHora = fopen(_ruta.c_str(), "rb");
     if (pDiaHora == nullptr) {
-        return -2;
+        return -2; // No pudo leer el archivo.
     }
 
     while (fread(&reg, _tamReg, 1, pDiaHora) == 1) {
         if (reg.getIdClase() == id) {
             fclose(pDiaHora);
-            return pos;
+            return pos; // Caso éxito, retorna la posición del elemento;
         }
         pos++;
     }
 
     fclose(pDiaHora);
-    return -1;
+    return -1; // No lo encontró.
 }
 
 int DiaHoraArchivo::contarRegistros() const {

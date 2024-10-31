@@ -10,7 +10,7 @@ Persona::Persona() {
 	setCorreoElectronico("No hay datos");
 	_edad = 0;
 }
-Persona::Persona(std::string nombre, std::string apellido, int dni, int edad, int dia, int mes, int anio, std::string correoElectronico) {
+Persona::Persona(std::string nombre, std::string apellido, long long dni, int edad, int dia, int mes, int anio, std::string correoElectronico) {
 	strcpy_s(_nombre, sizeof(_nombre), nombre.c_str());
 	strcpy_s(_apellido, sizeof(_apellido), apellido.c_str());
 	_DNI = dni;
@@ -26,7 +26,7 @@ void Persona::setNombre(std::string nombre) {
 void Persona::setApellido(std::string apellido) {
 	strcpy_s(_apellido, sizeof(_apellido), apellido.c_str());
 }
-void Persona::setDNI(int dni) {
+void Persona::setDNI(long long dni) {
 	_DNI = dni;
 }
 void Persona::setCorreoElectronico(std::string correoElectronico) {
@@ -40,7 +40,7 @@ std::string Persona::getNombre() const {
 std::string Persona::getApellido() const {
 	return _apellido;
 }
-int Persona::getDNI() const {
+long long Persona::getDNI() const {
 	return _DNI;
 }
 Fecha Persona::getFechaNacimiento() const {

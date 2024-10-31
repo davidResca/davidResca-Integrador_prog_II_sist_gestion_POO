@@ -5,7 +5,7 @@ Profe::Profe() : Empleado() {
 	_idProfe = -1;
 	_salarioHora = .0f;
 }
-Profe::Profe(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, int CUIT, const std::string& observaciones, int idProfe, float salarioHora)
+Profe::Profe(std::string nombre, std::string apellido, long long dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, long long CUIT, const std::string& observaciones, int idProfe, float salarioHora)
 	: Empleado(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones)
 {
 	_idProfe = idProfe;
