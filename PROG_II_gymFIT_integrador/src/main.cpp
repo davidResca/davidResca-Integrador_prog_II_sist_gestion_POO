@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Inscripciones.h"
 #include "Fecha.h"
 #include "Actividad.h"
 #include "Empleado.h"
@@ -197,20 +198,19 @@ void altaProfe() {
 	profesArchivo.listarRegistro();
 }
 
-void filtrarClasesPorProfesor(int idProfe);
-void filtrarClasesPorSala(int idSala);
-void filtrarClasesPorDia(int idClase);
-void verCantidadInscriptosClase(int idClase);
-void verListaProfesPorClase(int idClase);
-void verListadoTotalProfesores();
-void buscarAlumno(int idAlumno);
-void buscarProfe(int IdProfe);
-void verListadoInscriptosPorClase(int idClase);
+//void filtrarClasesPorProfesor(int idProfe);
+//void filtrarClasesPorSala(int idSala);
+//void filtrarClasesPorDia(int idClase);
+//void verCantidadInscriptosClase(int idClase);
+//void verListaProfesPorClase(int idClase);
+//void verListadoTotalProfesores();
+//void buscarAlumno(int idAlumno);
+//void buscarProfe(int IdProfe);
 
 
 int main() {
-	//altaClase();
-	altaProfe();
+	altaClase();
+	//altaProfe();
 
 	return 0;
 }
@@ -259,3 +259,37 @@ int main() {
 //}
 //
 //
+
+
+
+/*
+	
+	- crear class InscripcionesArchivo.
+	- crear una class Menu, o varias, tener en cuenta los datos que deben ingresar en el registro de profes, clases, diahorario, alumnos.
+
+	- Pensar cómo trabajar estas funciones o similares:
+
+		void filtrarClasesPorProfesor(int idProfe);
+		void filtrarClasesPorSala(int idSala);
+		void filtrarClasesPorDia(int idClase);
+		void verCantidadInscriptosClase(int idClase);
+		void verListaProfesPorClase(int idClase);
+		void verListadoTotalProfesores();
+		void buscarAlumno(int idAlumno);
+		void buscarProfe(int IdProfe);
+
+	- Validaciones de datos.
+
+
+*/
+
+
+void registrarProfe() {
+
+	Menu menu;
+	Profe profe;
+
+	// declaramos las variables con las que se cargarán los datos;
+	menu.registrarProfe();
+	profe.cargarProfe();
+}

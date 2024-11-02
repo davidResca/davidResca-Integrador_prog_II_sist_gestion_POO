@@ -10,7 +10,6 @@ Fecha::Fecha(int dia, int mes, int anio)
     _dia = dia;
     _mes = mes;
     _anio = anio;
-
     validarIngreso(dia, mes, anio);
 }
  
@@ -27,6 +26,7 @@ int Fecha::getAnio()
 {
     return _anio;
 }
+
 int Fecha::getCantidadDiasDelMes(int mes, int anio) {
     int cantidadDias = 0;
     int diasDelMes[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -87,6 +87,7 @@ bool Fecha::esAnioBisiesto(int anio)
 
 // conversion
 std::string Fecha::toString() {
+                                 //donde,     cuántos digitos,             qué ingresa
     return std::to_string(_dia).insert(0, 2 - std::to_string(_dia).length(), '0') + "/" +
         std::to_string(_mes).insert(0, 2 - std::to_string(_mes).length(), '0') + "/" +
         std::to_string(_anio);
