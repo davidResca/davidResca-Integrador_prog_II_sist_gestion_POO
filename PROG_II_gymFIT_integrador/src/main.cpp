@@ -283,13 +283,3 @@ int main() {
 
 */
 
-
-void registrarProfe() {
-
-	Menu menu;
-	Profe profe;
-
-	// declaramos las variables con las que se cargarán los datos;
-	menu.registrarProfe();
-	profe.cargarProfe();
-}
