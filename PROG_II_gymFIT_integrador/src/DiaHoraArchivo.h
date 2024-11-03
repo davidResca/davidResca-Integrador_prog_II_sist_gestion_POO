@@ -14,6 +14,7 @@ private:
 	int _tamReg;
 public:
 	DiaHoraArchivo(int tamanioRegistro);
+	bool comprobarArchivo() const override;
 	DiaHorario leerRegistro(int pos) const override;
 	bool listarRegistro() const override;
 	bool guardar(const DiaHorario& reg) const override;

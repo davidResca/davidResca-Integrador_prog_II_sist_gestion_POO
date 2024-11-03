@@ -25,3 +25,10 @@ void Inscripciones::setIdAlumno(int idAlumno) {
 void Inscripciones::setIdClase(int idClase) {
 	_idClase = idClase;
 }
+
+// interfaz
+void Inscripciones::mostrar()
+{
+	std::cout << "Clase: " << getIdClase() << std::endl;
+	std::cout << "Alumno: " << getIdAlumno() << std::endl;
+}

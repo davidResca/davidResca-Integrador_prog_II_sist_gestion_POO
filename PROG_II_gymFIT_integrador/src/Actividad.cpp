@@ -42,7 +42,7 @@ void Actividad::setIdLugarDeDesarrollo(int idLugar)
 }
 
 // interfaz
-void Actividad::mostrarActividad() const {
+void Actividad::mostrar() const {
 	std::cout << "id Actividad: " << getIdActividad() << std::endl;
 	std::cout << "Nombre: " << getNombreActividad() << std::endl;
 	std::cout << "Lugar: " << getIdLugarDeDesarrollo() << std::endl;

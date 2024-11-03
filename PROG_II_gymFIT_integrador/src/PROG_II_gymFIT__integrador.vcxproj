@@ -139,8 +139,10 @@
     <ClInclude Include="DiaHorario.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="Fecha.h" />
+    <ClInclude Include="FuncionesFiltrado.h" />
     <ClInclude Include="IArchivable.h" />
     <ClInclude Include="Inscripciones.h" />
+    <ClInclude Include="InscripcionesArchivo.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Profe.h" />
     <ClInclude Include="ProfesArchivo.h" />
@@ -155,7 +157,9 @@
     <ClCompile Include="DiaHorario.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Fecha.cpp" />
+    <ClCompile Include="FuncionesFiltrado.cpp" />
     <ClCompile Include="Inscripciones.cpp" />
+    <ClCompile Include="InscripcionesArchivo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Profe.cpp" />

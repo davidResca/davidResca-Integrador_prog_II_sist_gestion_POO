@@ -15,6 +15,7 @@ private:
 public:
 	ClasesArchivo(int tamanioRegistro);
 	Clase leerRegistro(int pos) const override;
+	bool comprobarArchivo() const override;
 	bool listarRegistro() const override;
 	bool guardar(const Clase& reg) const override;
 	int buscar(int id) const override;

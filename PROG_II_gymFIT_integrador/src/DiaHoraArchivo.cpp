@@ -5,6 +5,22 @@ DiaHoraArchivo::DiaHoraArchivo(int tamanioRegistro) {
     _tamReg = tamanioRegistro;
 }
 
+bool DiaHoraArchivo::comprobarArchivo() const {
+    FILE* pDiaHora;
+    bool lecturaExitosa = true;
+
+
+    pDiaHora = fopen(_ruta.c_str(), "rb");
+    if (pDiaHora == nullptr) {
+        lecturaExitosa = false;
+        // devuelve -2 si no puede abrir el archivo
+    }
+    else {
+        fclose(pDiaHora);
+    }
+    return lecturaExitosa;
+}
+
 bool DiaHoraArchivo::listarRegistro() const {
     DiaHorario reg;
     FILE* pDiaHora;

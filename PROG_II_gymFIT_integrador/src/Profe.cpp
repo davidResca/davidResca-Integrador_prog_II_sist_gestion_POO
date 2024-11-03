@@ -31,7 +31,7 @@ float Profe::getSalarioHora() const {
 }
 
 // interfaz
-void Profe::mostrarProfe() {
+void Profe::mostrar() {
 	Empleado::mostrar();
 	std::cout << "id profe: " << getIdProfe() << std::endl;
 	std::cout << "Salario por hora: " << getSalarioHora() << std::endl;

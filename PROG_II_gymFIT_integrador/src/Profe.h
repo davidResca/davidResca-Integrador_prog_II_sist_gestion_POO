@@ -19,7 +19,7 @@ public:
     float getSalarioHora() const;
   
     // interfaz
-    void mostrarProfe();
+    void mostrar();
 
     //destructor
     ~Profe();

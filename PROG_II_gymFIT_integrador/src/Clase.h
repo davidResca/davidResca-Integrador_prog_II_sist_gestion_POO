@@ -32,7 +32,7 @@ public:
 	void setDescripcion(std::string descripcion);
 
 	// interfaz
-	void mostrarClase() const;
+	void mostrar() const;
 
 	~Clase();
 };

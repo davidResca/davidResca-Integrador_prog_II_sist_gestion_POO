@@ -25,6 +25,6 @@ public:
 	void setIdLugarDeDesarrollo(int id);
 	
 	// interfaz
-	void mostrarActividad() const;
+	void mostrar() const;
 };
 

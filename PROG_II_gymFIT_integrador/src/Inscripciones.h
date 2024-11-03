@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+
 class Inscripciones
 {
 private:
@@ -15,6 +17,9 @@ public:
 	// setters
 	void setIdAlumno(int idAlumno);
 	void setIdClase(int idClase);
+
+	// interfaz
+	void mostrar();
 };
 
 

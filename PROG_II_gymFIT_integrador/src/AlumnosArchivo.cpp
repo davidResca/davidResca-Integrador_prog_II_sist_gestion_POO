@@ -5,6 +5,22 @@ ArchivoAlumnos::ArchivoAlumnos(int tamanioRegistro) {
 	_ruta = "archivos/alumnos.dat";
 	_tamReg = tamanioRegistro;
 }
+
+bool ArchivoAlumnos::comprobarArchivo() const {
+	FILE* pAlumno;
+	bool lecturaExitosa = true;
+
+
+	pAlumno = fopen(_ruta.c_str(), "rb");
+	if (pAlumno == nullptr) {
+		lecturaExitosa = false;
+		// devuelve -2 si no puede abrir el archivo
+	}
+	else {
+		fclose(pAlumno);
+	}
+	return lecturaExitosa;
+}
 bool ArchivoAlumnos::listarRegistro() const {
 	Alumno reg;
 	FILE* pAlumno; 
@@ -94,3 +110,4 @@ Alumno ArchivoAlumnos::leerRegistro(int ubi) const {
 	fclose(pAlumno);
 	return reg;
 }
+

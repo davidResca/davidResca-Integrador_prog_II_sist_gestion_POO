@@ -6,6 +6,22 @@ ProfesArchivo::ProfesArchivo(int tamanioRegistro) {
 	_tamReg = tamanioRegistro;
 }
 
+bool ProfesArchivo::comprobarArchivo() const {
+	FILE* pProfes;
+	bool lecturaExitosa = true;
+
+
+	pProfes = fopen(_ruta.c_str(), "rb");
+	if (pProfes == nullptr) {
+		lecturaExitosa = false;
+		// devuelve -2 si no puede abrir el archivo
+	}
+	else {
+		fclose(pProfes);
+	}
+	return lecturaExitosa;
+}
+
 bool ProfesArchivo::listarRegistro() const {
 	Profe reg;
 	FILE* pProfes;

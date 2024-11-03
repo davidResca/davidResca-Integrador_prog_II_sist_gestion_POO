@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include "IArchivable.h"
 #include "Profe.h"
@@ -10,11 +11,13 @@ private:
 public:
     // Constructor
     ProfesArchivo(int tamanioRegistro);
-    bool listarRegistro() const;
-    bool guardar(const Profe& reg) const;
-    int buscar(int id) const;
-    Profe leerRegistro(int ubi) const;
-    int contarRegistros() const;
-    bool modificarRegistro(const Profe& reg, int pos) const;
+
+    bool comprobarArchivo() const override;
+    bool listarRegistro() const override;
+    bool guardar(const Profe& reg) const override;
+    int buscar(int id) const override;
+    Profe leerRegistro(int ubi) const override;
+    int contarRegistros() const override;
+    bool modificarRegistro(const Profe& reg, int pos) const override;
     ~ProfesArchivo() override {};
 };

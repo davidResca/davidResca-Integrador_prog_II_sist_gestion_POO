@@ -5,6 +5,24 @@ ClasesArchivo::ClasesArchivo(int tamanioRegistro) {
     _tamReg = tamanioRegistro;
 }
 
+bool ClasesArchivo::comprobarArchivo() const {
+    FILE* pClase;
+    Clase reg;
+    bool lecturaExitosa = true;
+
+
+    pClase = fopen(_ruta.c_str(), "rb");
+    if (pClase == nullptr) {
+        lecturaExitosa = false;
+        // devuelve -2 si no puede abrir el archivo
+    }
+    else {
+        fclose(pClase);
+    }
+
+    return lecturaExitosa;
+}
+
 bool ClasesArchivo::listarRegistro() const {
     Clase reg;
     FILE* pClase;
@@ -15,7 +33,7 @@ bool ClasesArchivo::listarRegistro() const {
     }
 
     while (fread(&reg, _tamReg, 1, pClase) == 1) {
-        reg.mostrarClase(); 
+        reg.mostrar(); 
     }
 
     fclose(pClase);
@@ -44,18 +62,21 @@ int ClasesArchivo::buscar(int id) const {
     pClase = fopen(_ruta.c_str(), "rb");
     if (pClase == nullptr) {
         return -2; 
+        // devuelve -2 si no puede abrir el archivo
     }
 
     while (fread(&reg, _tamReg, 1, pClase) == 1) {
         if (reg.getIdClase() == id) { 
             fclose(pClase);
             return pos;
+            // devuelve la posición si lo encuentra
         }
         pos++;
     }
 
     fclose(pClase);
     return -1; 
+    // devuelve -1 si no lo encuentra
 }
 
 int ClasesArchivo::contarRegistros() const {

@@ -4,6 +4,7 @@ template <typename T>
 class IArchivable
 {
 public:
+	virtual bool comprobarArchivo() const = 0;
 	virtual bool listarRegistro() const = 0;
 	virtual bool guardar(const T& reg) const = 0;
 	virtual int buscar(int id) const = 0;

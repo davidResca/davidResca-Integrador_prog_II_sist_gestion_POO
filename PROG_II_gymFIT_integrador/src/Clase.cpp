@@ -37,8 +37,8 @@ void Clase::setDescripcion(std::string descripcion)
 }
 
 // interfaz
-void Clase::mostrarClase() const {
-	Actividad::mostrarActividad();
+void Clase::mostrar() const {
+	Actividad::mostrar();
 	std::cout << "Profe: " << getIdProfe() << std::endl;
 	std::cout << "Clase: " << getIdClase() << std::endl;
 	std::cout << "Cantidad de inscriptos: " << getCantidadInscriptos() << std::endl;
