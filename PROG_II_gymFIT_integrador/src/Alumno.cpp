@@ -7,8 +7,8 @@ Alumno::Alumno() : Persona() {
 	_idMembresia = -1;
 	_estado = false;
 }
-Alumno::Alumno(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, int idMembresia, bool estado)
-	: Persona(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico)
+Alumno::Alumno(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, int idMembresia, bool estado, std::string direccion, long long telefono)
+	: Persona(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico, direccion, telefono)
 {
 	_idAlumno = idAlumno;
 	Fecha _fechaInscripcion(diaInsc, mesInsc, anioInsc);

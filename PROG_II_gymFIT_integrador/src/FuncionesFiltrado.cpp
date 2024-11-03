@@ -129,10 +129,10 @@ void altaProfe() {
     ProfesArchivo profesArchivo(sizeof(Profe));
     Profe profeNuevo;
 
-    long long dni, CUIT;
+    long long dni, CUIT, telefono;
     float horasTrabajadas = 0, salarioHora;
     int idProfe, edad, diaNac, mesNac, anioNac, diaAlta, mesAlta, anioAlta;
-    std::string nombre, apellido, correoElectronico, observaciones;
+    std::string nombre, apellido, correoElectronico, observaciones, direccion;
 
     std::cout << " ALTA PROFE: " << std::endl;
     std::cout << " --------------------- " << std::endl;
@@ -147,6 +147,9 @@ void altaProfe() {
     std::cin.ignore();
     std::cout << "Observaciones: " << std::endl;
     std::getline(std::cin, observaciones);
+    
+    std::cout << "Direccion: " << std::endl;
+    std::getline(std::cin, direccion);
 
     std::cout << "DNI: " << std::endl;
     std::cin >> dni;
@@ -176,10 +179,13 @@ void altaProfe() {
     std::cout << "anio: " << std::endl;
     std::cin >> anioAlta;
 
+    std::cout << "telefono: " << std::endl;
+    std::cin >> telefono;
+
     std::cout << "Salario a cobrar por hora: " << std::endl;
     std::cin >> salarioHora;
 
-    profeNuevo = Profe(nombre, apellido, dni, edad, diaNac, mesNac, anioNac, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones, idProfe, salarioHora);
+    profeNuevo = Profe(nombre, apellido, dni, edad, diaNac, mesNac, anioNac, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones, idProfe, salarioHora, direccion, telefono);
 
     system("cls");
     int guardaRegistro;

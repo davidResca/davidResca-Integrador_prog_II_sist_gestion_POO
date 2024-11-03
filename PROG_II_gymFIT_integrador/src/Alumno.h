@@ -13,7 +13,7 @@ private:
 public:
 	// constructor
 	Alumno();
-	Alumno(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, int idMembresia, bool estado);
+	Alumno(std::string nombre, std::string apellido, int dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, int idMembresia, bool estado, std::string direccion, long long telefono);
 
 	// setters
 	void setIdAlumno(int idAlumno);

@@ -10,8 +10,8 @@ Empleado::Empleado() : Persona() {
 	_CUIT = 0;
 	strcpy_s(_observaciones, sizeof(_observaciones), valorDefault.c_str());
 };
-Empleado::Empleado(std::string nombre, std::string apellido, long long dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, long long CUIT, const std::string& observaciones)
-	: Persona(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico)
+Empleado::Empleado(std::string nombre, std::string apellido, long long dni, int edad, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int diaAlta, int mesAlta, int anioAlta, float horasTrabajadas, long long CUIT, const std::string& observaciones, std::string direccion, long long telefono)
+	: Persona(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico, direccion, telefono)
 {
 	_fechaAlta = Fecha(diaAlta, mesAlta, anioAlta);
 	_horasTrabajadas = horasTrabajadas;

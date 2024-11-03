@@ -13,7 +13,7 @@ private:
 public:
 	// constructor
 	Empleado();
-	Empleado(std::string nombre,std::string apellido,long long dni,int edad,int diaNasc,int mesNasc,int anioNasc,std::string correoElectronico,int diaAlta,int mesAlta,int anioAlta,float horasTrabajadas,long long CUIT,const std::string& observaciones);
+	Empleado(std::string nombre,std::string apellido,long long dni,int edad,int diaNasc,int mesNasc,int anioNasc,std::string correoElectronico,int diaAlta,int mesAlta,int anioAlta,float horasTrabajadas,long long CUIT,const std::string& observaciones, std::string direccion, long long telefono);
 
 	//setters
 	void setFechaAlta(int dia, int mes, int anio);
