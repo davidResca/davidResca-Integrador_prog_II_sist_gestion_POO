@@ -4,19 +4,19 @@
 class Inscripciones
 {
 private:
-	int _idClase;
+	int _idHorario;
 	int _idAlumno;
 public:
 	Inscripciones();
-	Inscripciones(int idClase, int idAlumno);
+	Inscripciones(int idHorario, int idAlumno);
 
 	// getters
 	int getIdAlumno();
-	int getIdClase();
+	int getIdHorario();
 	
 	// setters
 	void setIdAlumno(int idAlumno);
-	void setIdClase(int idClase);
+	void setIdHorario(int idHorario);
 
 	// interfaz
 	void mostrar();
