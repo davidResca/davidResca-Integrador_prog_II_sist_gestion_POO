@@ -60,7 +60,7 @@ int ArchivoAlumnos::buscar(int id) const {
 		return -2;
 	}
 	while (fread(&reg, _tamReg, 1, pAlumno) == 1) {
-		if (reg.getIdAlumno() == id && reg.getEstado()) { 
+		if (reg.getId() == id && reg.getEstado()) { 
 			fclose(pAlumno);
 			return pos;
 		}

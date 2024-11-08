@@ -63,7 +63,7 @@ int DiaHoraArchivo::buscar(int id) const {
     }
 
     while (fread(&reg, _tamReg, 1, pDiaHora) == 1) {
-        if (reg.getIdClase() == id) {
+        if (reg.getIdActividad() == id) {
             fclose(pDiaHora);
             return pos; // Caso éxito, retorna la posición del elemento;
         }

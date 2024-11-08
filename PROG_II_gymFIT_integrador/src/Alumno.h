@@ -23,7 +23,7 @@ public:
 
 	// getters 
 	Fecha getFechaInscripcion() const;
-	int getIdAlumno() const;
+	int getId() const;
 	int getIdMembresia () const;
 	bool getEstado() const;
 

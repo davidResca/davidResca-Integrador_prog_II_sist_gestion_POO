@@ -2,20 +2,25 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include "Profe.h"
-#include "Clase.h"
-#include "ClasesArchivo.h"
+#include "Actividad.h"
+#include "ActividadesArchivo.h"
 #include "ProfesArchivo.h"
 #include "AlumnosArchivo.h"
 #include "DiaHoraArchivo.h"
 
 
+//Gestión de clases
 void filtrarClasesPorProfesor(int idProfe);
 void verListaProfesPorClase(int idClase);
 void verListadoTotalProfesores();
+
+//Gestión de profesores
 void buscarProfe(int idProfe);
-void buscarAlumno(int idAlumno);
 void altaProfe();
 void altaClase();
+
+//Gestión de alumnos
+void buscarAlumno(int idAlumno);
 
 /*
 void verCantidadInscriptosClase(int idClase);

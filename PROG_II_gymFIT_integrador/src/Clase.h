@@ -18,7 +18,7 @@ public:
 	Clase(int idActividad, std::string nombreActividad, int idLugarDeDesarrollo, int idClase, int idProfe, int cantidadInscriptos, int cantMax, std::string descripcion);
 
 	// getters
-	int getIdClase() const;
+	int getId() const;
 	int getIdProfe() const;
 	int getCantidadInscriptos() const;
 	int getCantMax() const;

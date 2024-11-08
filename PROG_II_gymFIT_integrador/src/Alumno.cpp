@@ -34,7 +34,7 @@ void Alumno::setEstadoAlta(bool estado) {
 Fecha Alumno::getFechaInscripcion() const {
 	return _fechaInscripcion;
 }
-int Alumno::getIdAlumno() const {
+int Alumno::getId() const {
 	return _idAlumno;
 }
 int Alumno::getIdMembresia() const {
@@ -85,9 +85,9 @@ bool Alumno::getEstado() const {
 //}
 void Alumno::mostrar() {
 	if (_estado) {
-		std::cout << "------------ " << "ALUMNO: " << getIdAlumno() << " ------------" << std::endl;
+		std::cout << "------------ " << "ALUMNO: " << getId () << " ------------" << std::endl;
 		Persona::mostrarPersona();
-		std::cout << "ID ALUMNO: " << getIdAlumno() << std::endl;
+		std::cout << "ID ALUMNO: " << getId () << std::endl;
 		std::cout << "FECHA DE INSCRIPCION: " << getFechaInscripcion() << std::endl;
 		std::cout << "CARRERA: " << getIdMembresia() << std::endl;
 

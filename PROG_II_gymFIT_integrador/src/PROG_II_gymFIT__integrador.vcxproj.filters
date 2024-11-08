@@ -13,105 +13,150 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\Gestion Archivos">
+      <UniqueIdentifier>{5f042090-c860-4840-9333-7d5d343b1d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Gestion Clases">
+      <UniqueIdentifier>{0c9b62e9-d4a1-4f63-865d-f13779382494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Utilidades">
+      <UniqueIdentifier>{062dda69-c831-44b6-acde-ba744f253421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Entidades">
+      <UniqueIdentifier>{df477548-c010-41bf-bb65-5fceee28b19e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Entidades">
+      <UniqueIdentifier>{6c8c93a2-923b-4ba1-9187-dc0a16b54800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Gestion Clases">
+      <UniqueIdentifier>{a8d52a74-ac87-4e7a-b089-996ca2011d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Utilidades">
+      <UniqueIdentifier>{7dab0f30-40bc-429e-8a85-9231e8f3fe99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Gestion Archivos">
+      <UniqueIdentifier>{cfe2ff06-f5b2-4c37-8991-837be17439bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Fecha.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Persona.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Empleado.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Profe.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Actividad.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Clase.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="Alumno.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Entidades</Filter>
     </ClInclude>
-    <ClInclude Include="DiaHorario.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="Fecha.h">
+      <Filter>Archivos de encabezado\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Persona.h">
+      <Filter>Archivos de encabezado\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Profe.h">
+      <Filter>Archivos de encabezado\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="AlumnosArchivo.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
     </ClInclude>
-    <ClInclude Include="ProfesArchivo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ClasesArchivo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="IArchivable.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="ActividadesArchivo.h">
+      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
     </ClInclude>
     <ClInclude Include="DiaHoraArchivo.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
+    </ClInclude>
+    <ClInclude Include="DiaHorario.h">
+      <Filter>Archivos de encabezado\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="IArchivable.h">
+      <Filter>Archivos de encabezado\Utilidades</Filter>
     </ClInclude>
     <ClInclude Include="Inscripciones.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Entidades</Filter>
     </ClInclude>
     <ClInclude Include="InscripcionesArchivo.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
     </ClInclude>
     <ClInclude Include="FuncionesFiltrado.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Utilidades</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfesArchivo.h">
+      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Archivos de encabezado\Utilidades</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionarAlumno.h">
+      <Filter>Archivos de encabezado\Gestion Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionarProfe.h">
+      <Filter>Archivos de encabezado\Gestion Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionarClase.h">
+      <Filter>Archivos de encabezado\Gestion Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilidades.h">
+      <Filter>Archivos de encabezado\Utilidades</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Fecha.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Persona.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Empleado.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Profe.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Actividad.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Clase.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="Alumno.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="DiaHorario.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="Fecha.cpp">
+      <Filter>Archivos de origen\Entidades</Filter>
     </ClCompile>
-    <ClCompile Include="AlumnosArchivo.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="Persona.cpp">
+      <Filter>Archivos de origen\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Profe.cpp">
+      <Filter>Archivos de origen\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="ProfesArchivo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="ClasesArchivo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="DiaHoraArchivo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Inscripciones.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Gestion Archivos</Filter>
     </ClCompile>
     <ClCompile Include="InscripcionesArchivo.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Gestion Archivos</Filter>
+    </ClCompile>
+    <ClCompile Include="Inscripciones.cpp">
+      <Filter>Archivos de origen\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Empleado.cpp">
+      <Filter>Archivos de origen\Entidades</Filter>
+    </ClCompile>
+    <ClCompile Include="AlumnosArchivo.cpp">
+      <Filter>Archivos de origen\Gestion Archivos</Filter>
+    </ClCompile>
+    <ClCompile Include="ActividadesArchivo.cpp">
+      <Filter>Archivos de origen\Gestion Archivos</Filter>
+    </ClCompile>
+    <ClCompile Include="DiaHoraArchivo.cpp">
+      <Filter>Archivos de origen\Gestion Archivos</Filter>
+    </ClCompile>
+    <ClCompile Include="DiaHorario.cpp">
+      <Filter>Archivos de origen\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="FuncionesFiltrado.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Utilidades</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Archivos de origen\Utilidades</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionarAlumno.cpp">
+      <Filter>Archivos de origen\Gestion Clases</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionarClase.cpp">
+      <Filter>Archivos de origen\Gestion Clases</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionarProfe.cpp">
+      <Filter>Archivos de origen\Gestion Clases</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

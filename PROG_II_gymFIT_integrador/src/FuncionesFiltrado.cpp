@@ -1,7 +1,7 @@
 #include "FuncionesFiltrado.h"
 
 void filtrarClasesPorProfesor(int idProfe) {
-    ClasesArchivo clasesArchivo(sizeof(Clase));
+    ActividadesArchivo clasesArchivo(sizeof(Actividad));
     ProfesArchivo profesArchivo(sizeof(Profe));
 
     bool leyoArchClases = clasesArchivo.comprobarArchivo();
@@ -23,7 +23,7 @@ void filtrarClasesPorProfesor(int idProfe) {
 
     bool encontrado = false;
     for (int i = 0; i < clasesArchivo.contarRegistros(); i++) {
-        Clase clase = clasesArchivo.leerRegistro(i);
+        Actividad clase = clasesArchivo.leerRegistro(i);
         if (clase.getIdProfe() == idProfe) {
             clase.mostrar();
             encontrado = true;
@@ -36,10 +36,10 @@ void filtrarClasesPorProfesor(int idProfe) {
 }
 
 void verListaProfesPorClase(int idClase) {
-    ClasesArchivo clasesArchivo(sizeof(Clase));
+    ActividadesArchivo clasesArchivo(sizeof(Actividad));
     ProfesArchivo profesArchivo(sizeof(Profe));
 
-    Clase clase;
+    Actividad clase;
     Profe profesor;
 
     bool claseEncontrada = false;
@@ -49,7 +49,7 @@ void verListaProfesPorClase(int idClase) {
     for (int i = 0; i < clasesArchivo.contarRegistros(); i++) {
         clase = clasesArchivo.leerRegistro(i);
 
-        if (clase.getIdClase() == idClase) {
+        if (clase.getId() == idClase) {
             claseEncontrada = true;
 
             std::cout << "Clase: " << clase.getNombreActividad() << std::endl;
@@ -207,14 +207,15 @@ void altaProfe() {
 }
 
 void altaClase() {
-    ClasesArchivo clasesArchivo(sizeof(Clase));
+    ActividadesArchivo clasesArchivo(sizeof(Actividad));
     DiaHoraArchivo diaHoraClaseArchivo(sizeof(DiaHorario));
 
-    Clase clase;
+    Actividad clase;
     DiaHorario diaHorarioClase;
 
-    int idActividad, idClase, idProfe, idLugarDeDesarrollo, cantMax, horaInicio, horaFin, cantInscriptos = 0;
+    int idHorario, idActividad, idProfe, idLugarDeDesarrollo, cantMax, horaInicio, horaFin, cantInscriptos = 0;
     std::string descripcion, actividadNombre, dia;
+    bool estado = true;
 
     std::cout << " REGISTRAR NUEVA CLASE: " << std::endl;
     std::cout << " --------------------- " << std::endl;
@@ -222,9 +223,6 @@ void altaClase() {
 
     std::cout << "Id de actividad: " << std::endl;
     std::cin >> idActividad;
-
-    std::cout << "Id de la clase: " << std::endl;
-    std::cin >> idClase;
 
     std::cin.ignore();
 
@@ -234,6 +232,9 @@ void altaClase() {
     std::getline(std::cin, descripcion);
     std::cout << "Dia de dictado: " << std::endl;
     std::getline(std::cin, dia);
+
+    std::cout << "Identificador de Horario  (id): " << std::endl;
+    std::cin >> idHorario;
 
     std::cout << "hora inicio (ingresar enteros): " << std::endl;
     std::cin >> horaInicio;
@@ -247,9 +248,10 @@ void altaClase() {
     std::cout << "Cantidad maxima alumnos: " << std::endl;
     std::cin >> cantMax;
 
-    clase = Clase(idActividad, actividadNombre, idLugarDeDesarrollo, idProfe, idClase, cantInscriptos, cantMax, descripcion);
+    // int idActividad, std::string nombreActividad, int idLugarDeDesarrollo, int idProfe, int cantMax, std::string descripcion, bool estado
+    clase = Actividad(idActividad, actividadNombre, idLugarDeDesarrollo, idProfe, cantMax, descripcion, estado);
     //clase = Clase(1, "rpm", 4, 2, 4, 0, 30, "clase divertida de rpm");
-    diaHorarioClase = DiaHorario(idClase, idProfe, dia, horaInicio, horaFin);
+    diaHorarioClase = DiaHorario(idHorario, idActividad, dia, horaInicio, horaFin, estado);
     //diaHorarioClase = DiaHorario(2, 2, "lunes", 15, 16);
 
     system("cls");

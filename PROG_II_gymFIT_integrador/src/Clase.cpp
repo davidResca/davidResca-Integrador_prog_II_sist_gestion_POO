@@ -19,7 +19,7 @@ Clase::Clase(int idActividad, std::string nombreActividad, int idLugarDeDesarrol
 };
 
 // getters
-int Clase::getIdClase() const{return _idClase;}
+int Clase::getId() const{return _idClase;}
 int Clase::getIdProfe() const{return _idProfe;}
 int Clase::getCantidadInscriptos() const { return _cantidadInscriptos; }
 int Clase::getCantMax() const {	return _cantMax;}
@@ -40,7 +40,7 @@ void Clase::setDescripcion(std::string descripcion)
 void Clase::mostrar() const {
 	Actividad::mostrar();
 	std::cout << "Profe: " << getIdProfe() << std::endl;
-	std::cout << "Clase: " << getIdClase() << std::endl;
+	std::cout << "Clase: " << getId() << std::endl;
 	std::cout << "Cantidad de inscriptos: " << getCantidadInscriptos() << std::endl;
 	std::cout << "Cant Maxima alumnos: " << getCantMax() << std::endl;
 	std::cout << "Descripcion: " << getDescripcion() << std::endl;

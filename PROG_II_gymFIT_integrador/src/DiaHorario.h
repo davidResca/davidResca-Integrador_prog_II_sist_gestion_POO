@@ -9,30 +9,31 @@ class DiaHorario
 {
 private:
     enum DiaSemana { lunes, martes, miercoles, jueves, viernes, sabado, domingo };
-
-    int _idClase;
-    int _idProfe;
+    
+    int _idHorario;
+    int _idActividad;
     DiaSemana _diaSemana;
     int _horaInicio;
     int _horaFin;
+    bool _estado;
 
     static DiaSemana convertirStringADia(const std::string& diaStr);
     std::string convertirDiaAString(const DiaSemana& dia) const;
     static void convertirAMinusculas(std::string& dia);
 public:
     DiaHorario();
-    DiaHorario(int idClase, int idProfe, std::string diaSemana, int horaInicio, int horaFin);
+    DiaHorario(int idHorario, int idActividad, std::string diaSemana, int horaInicio, int horaFin, bool estado);
 
     // getters
-    int getIdClase() const;
-    int getIdProfe() const;
+    int getId() const;
+    int getIdActividad() const;
     std::string getDiaSemana() const;
     int getHoraInicio() const;
     int getHoraFin() const;
 
     // setters
-    void setIdClase(int idClase);
-    void setIdProfe(int idProfe);
+    void setId(int idHorario);
+    void setIdActividad(int idActividad);
     void setDiaSemana(const std::string& diaSemana);
     void setHoraInicio(int horaInicio);
     void setHoraFin(int horaFin);
