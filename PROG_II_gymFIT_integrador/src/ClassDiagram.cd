@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="Clase DiaHorario:&#xD;&#xA;&#xD;&#xA;- Podría heredar de Actividad o Clase&#xD;&#xA;- Considerar renombrar">
+  <Comment CommentText="Clase Horario:&#xD;&#xA;&#xD;&#xA;- Podría heredar de Actividad o Clase&#xD;&#xA;- Considerar renombrar">
     <Position X="20.178" Y="5.848" Height="1.354" Width="2.26" />
   </Comment>
   <Comment CommentText="agregar DIRECCION, TELEFONO y cambiar correoElectronico por email">
@@ -48,18 +48,18 @@
       <FileName>DiaHoraArchivo.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DiaHorario">
+  <Class Name="Horario">
     <Position X="21.25" Y="8.25" Width="3" />
     <NestedTypes>
-      <Enum Name="DiaHorario::DiaSemana" Collapsed="true">
+      <Enum Name="Horario::DiaSemana" Collapsed="true">
         <TypeIdentifier>
-          <NewMemberFileName>DiaHorario.h</NewMemberFileName>
+          <NewMemberFileName>Horario.h</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>BAQAgAoACAAABAAAAAAAABDAAMQAAGAAAAAAMAAASAg=</HashCode>
-      <FileName>DiaHorario.h</FileName>
+      <FileName>Horario.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Empleado">

@@ -6,7 +6,7 @@
 #include "ActividadesArchivo.h"
 #include "ProfesArchivo.h"
 #include "AlumnosArchivo.h"
-#include "DiaHoraArchivo.h"
+#include "HorarioArchivo.h"
 
 
 //Gestión de clases
@@ -31,7 +31,7 @@ void filtrarClasesPorDia(const std::string& dia);
 /*
 
 	- crear class InscripcionesArchivo.
-	- crear una class Menu, o varias, tener en cuenta los datos que deben ingresar en el registro de profes, clases, diahorario, alumnos.
+	- crear una class Menu, o varias, tener en cuenta los datos que deben ingresar en el registro de profes, clases, Horario, alumnos.
 
 	- Pensar cómo trabajar estas funciones o similares:
 

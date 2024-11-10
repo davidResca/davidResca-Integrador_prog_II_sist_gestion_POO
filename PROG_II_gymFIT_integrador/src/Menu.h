@@ -1,21 +1,24 @@
-#pragma once
-
+#pragma 
 #include "GestionarAlumno.h"
-#include "GestionarClase.h"
+#include "GestionarProfe.h"
+#include "GestionarActividad.h"
+#include "GestionarHorario.h"
+
 
 class Menu
 {
 public:
 	void mostrarMenu();
 	void procesarOpcion(int opcion);
-
 private:
 	GestionarAlumno gestorAlumnos;
-	GestionarClase gestorClases;
+	//GestionarProfe gestorProfe;
+	GestionarActividad gestorActividades;
+	//GestionarHorario gestorHorarios;
 
 	void gestionarAlumnos();
-	void gestionarProfes();
+	//void gestionarProfes();
 	void gestionarActividades();
-	void gestionarClases();
+	//void gestionarHorarios();
 };
 

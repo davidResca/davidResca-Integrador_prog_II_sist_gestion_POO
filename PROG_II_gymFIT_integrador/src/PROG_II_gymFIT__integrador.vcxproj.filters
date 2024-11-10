@@ -63,12 +63,6 @@
     <ClInclude Include="ActividadesArchivo.h">
       <Filter>Archivos de encabezado\Gestion Archivos</Filter>
     </ClInclude>
-    <ClInclude Include="DiaHoraArchivo.h">
-      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
-    </ClInclude>
-    <ClInclude Include="DiaHorario.h">
-      <Filter>Archivos de encabezado\Entidades</Filter>
-    </ClInclude>
     <ClInclude Include="IArchivable.h">
       <Filter>Archivos de encabezado\Utilidades</Filter>
     </ClInclude>
@@ -93,11 +87,20 @@
     <ClInclude Include="GestionarProfe.h">
       <Filter>Archivos de encabezado\Gestion Clases</Filter>
     </ClInclude>
-    <ClInclude Include="GestionarClase.h">
-      <Filter>Archivos de encabezado\Gestion Clases</Filter>
-    </ClInclude>
     <ClInclude Include="Utilidades.h">
       <Filter>Archivos de encabezado\Utilidades</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionarActividad.h">
+      <Filter>Archivos de encabezado\Gestion Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionarHorario.h">
+      <Filter>Archivos de encabezado\Gestion Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="HorarioArchivo.h">
+      <Filter>Archivos de encabezado\Gestion Archivos</Filter>
+    </ClInclude>
+    <ClInclude Include="Horario.h">
+      <Filter>Archivos de encabezado\Entidades</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,7 +140,7 @@
     <ClCompile Include="ActividadesArchivo.cpp">
       <Filter>Archivos de origen\Gestion Archivos</Filter>
     </ClCompile>
-    <ClCompile Include="DiaHoraArchivo.cpp">
+    <ClCompile Include="HorarioArchivo.cpp">
       <Filter>Archivos de origen\Gestion Archivos</Filter>
     </ClCompile>
     <ClCompile Include="DiaHorario.cpp">
@@ -152,10 +155,13 @@
     <ClCompile Include="GestionarAlumno.cpp">
       <Filter>Archivos de origen\Gestion Clases</Filter>
     </ClCompile>
-    <ClCompile Include="GestionarClase.cpp">
+    <ClCompile Include="GestionarProfe.cpp">
       <Filter>Archivos de origen\Gestion Clases</Filter>
     </ClCompile>
-    <ClCompile Include="GestionarProfe.cpp">
+    <ClCompile Include="GestionarActividad.cpp">
+      <Filter>Archivos de origen\Gestion Clases</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionarHorario.cpp">
       <Filter>Archivos de origen\Gestion Clases</Filter>
     </ClCompile>
   </ItemGroup>

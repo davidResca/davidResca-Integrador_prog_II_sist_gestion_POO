@@ -208,10 +208,10 @@ void altaProfe() {
 
 void altaClase() {
     ActividadesArchivo clasesArchivo(sizeof(Actividad));
-    DiaHoraArchivo diaHoraClaseArchivo(sizeof(DiaHorario));
+    HorarioArchivo diaHoraClaseArchivo(sizeof(Horario));
 
     Actividad clase;
-    DiaHorario diaHorarioClase;
+    Horario HorarioClase;
 
     int idHorario, idActividad, idProfe, idLugarDeDesarrollo, cantMax, horaInicio, horaFin, cantInscriptos = 0;
     std::string descripcion, actividadNombre, dia;
@@ -251,8 +251,8 @@ void altaClase() {
     // int idActividad, std::string nombreActividad, int idLugarDeDesarrollo, int idProfe, int cantMax, std::string descripcion, bool estado
     clase = Actividad(idActividad, actividadNombre, idLugarDeDesarrollo, idProfe, cantMax, descripcion, estado);
     //clase = Clase(1, "rpm", 4, 2, 4, 0, 30, "clase divertida de rpm");
-    diaHorarioClase = DiaHorario(idHorario, idActividad, dia, horaInicio, horaFin, estado);
-    //diaHorarioClase = DiaHorario(2, 2, "lunes", 15, 16);
+    HorarioClase = Horario(idHorario, idActividad, dia, horaInicio, horaFin, estado);
+    //HorarioClase = Horario(2, 2, "lunes", 15, 16);
 
     system("cls");
     int guardaRegistro;
@@ -269,14 +269,14 @@ void altaClase() {
     }
 
     clasesArchivo.guardar(clase);
-    diaHoraClaseArchivo.guardar(diaHorarioClase);
+    diaHoraClaseArchivo.guardar(HorarioClase);
 
     clasesArchivo.listarRegistro();
     std::cout << std::endl;
     diaHoraClaseArchivo.listarRegistro();
 
     /*darAltaRegistro(clasesArchivo, clase);
-    darAltaRegistro(diaHoraClaseArchivo, diaHorarioClase);
+    darAltaRegistro(diaHoraClaseArchivo, HorarioClase);
     mostrarListarRegistros(clasesArchivo);
     mostrarListarRegistros(diaHoraClaseArchivo);*/
 }

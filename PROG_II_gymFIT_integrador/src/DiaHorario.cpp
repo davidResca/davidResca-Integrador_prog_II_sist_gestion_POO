@@ -1,7 +1,7 @@
-#include "DiaHorario.h"
+#include "Horario.h"
 
 //constructores
-DiaHorario::DiaHorario() {
+Horario::Horario() {
 	_idHorario = -1;
 	_idActividad = -1;
 	_diaSemana = lunes;
@@ -9,7 +9,7 @@ DiaHorario::DiaHorario() {
 	_horaFin = -1;
 	_estado = false;
 }
-DiaHorario::DiaHorario(int idHorario, int idActividad, std::string diaSemana, int horaInicio, int horaFin, bool estado) {
+Horario::Horario(int idHorario, int idActividad, std::string diaSemana, int horaInicio, int horaFin, bool estado) {
 	_idHorario = idHorario;
 	_idActividad = idActividad;
 	_diaSemana = convertirStringADia(diaSemana);
@@ -19,42 +19,42 @@ DiaHorario::DiaHorario(int idHorario, int idActividad, std::string diaSemana, in
 }
 
 // getters
-int DiaHorario::getId() const { return _idHorario; }
-int DiaHorario::getIdActividad() const {
+int Horario::getId() const { return _idHorario; }
+int Horario::getIdActividad() const {
 	return _idActividad;
 }
-std::string DiaHorario::getDiaSemana() const {
+std::string Horario::getDiaSemana() const {
 	std::string dia = convertirDiaAString(_diaSemana);
 
 	return dia;
 }
-int DiaHorario::getHoraInicio() const {
+int Horario::getHoraInicio() const {
 	return _horaInicio;
 }
-int DiaHorario::getHoraFin() const {
+int Horario::getHoraFin() const {
 	return _horaFin;
 }
 
 // setters
-void DiaHorario::setId(int idHorario) {
+void Horario::setId(int idHorario) {
 	_idHorario = idHorario;
 }
-void DiaHorario::setIdActividad(int idActividad) {
+void Horario::setIdActividad(int idActividad) {
 	_idActividad = idActividad;
 }
-void DiaHorario::setDiaSemana(const std::string& diaSemana) {
+void Horario::setDiaSemana(const std::string& diaSemana) {
 	_diaSemana = convertirStringADia(diaSemana);
 }
-void DiaHorario::setHoraInicio(int horaInicio)
+void Horario::setHoraInicio(int horaInicio)
 {
 	_horaInicio = horaInicio;
 }
-void DiaHorario::setHoraFin(int horaFin) {
+void Horario::setHoraFin(int horaFin) {
 	_horaFin = horaFin;
 }
 
 // conversores
-DiaHorario::DiaSemana DiaHorario::convertirStringADia(const std::string& diaStr) {
+Horario::DiaSemana Horario::convertirStringADia(const std::string& diaStr) {
 	std::string lowerStr = diaStr;
 
 	convertirAMinusculas(lowerStr);
@@ -69,7 +69,7 @@ DiaHorario::DiaSemana DiaHorario::convertirStringADia(const std::string& diaStr)
 	else if (lowerStr == "domingo") return domingo;
 	else throw std::invalid_argument("Día inválido."); // excepción
 }
-std::string DiaHorario::convertirDiaAString(const DiaSemana& dia) const {
+std::string Horario::convertirDiaAString(const DiaSemana& dia) const {
 	switch (dia) {
 	case lunes:     return "lunes";
 	case martes:    return "martes";
@@ -81,14 +81,14 @@ std::string DiaHorario::convertirDiaAString(const DiaSemana& dia) const {
 	default:        return "Día desconocido";
 	}
 }
-void DiaHorario::convertirAMinusculas(std::string& dia) {
+void Horario::convertirAMinusculas(std::string& dia) {
 	for (int i = 0; i < dia.size(); i++) {
 		dia[i] = std::tolower(dia[i]);
 	}
 }
 
 // interfaz 
-void DiaHorario::mostrarDiaHorario() const {
+void Horario::mostrarHorario() const {
 	std::cout << "id registro: " << getId() << std::endl;
 	std::cout << "id Clase: " << getIdActividad() << std::endl;
 	std::cout << "Dia : " << getDiaSemana() << std::endl;
@@ -97,4 +97,4 @@ void DiaHorario::mostrarDiaHorario() const {
 }
 
 // destructor
-DiaHorario::~DiaHorario() {};
+Horario::~Horario() {};

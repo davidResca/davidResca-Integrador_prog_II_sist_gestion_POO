@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -134,13 +134,14 @@
     <ClInclude Include="Alumno.h" />
     <ClInclude Include="AlumnosArchivo.h" />
     <ClInclude Include="ActividadesArchivo.h" />
-    <ClInclude Include="DiaHoraArchivo.h" />
-    <ClInclude Include="DiaHorario.h" />
+    <ClInclude Include="HorarioArchivo.h" />
+    <ClInclude Include="Horario.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="Fecha.h" />
     <ClInclude Include="FuncionesFiltrado.h" />
+    <ClInclude Include="GestionarActividad.h" />
     <ClInclude Include="GestionarAlumno.h" />
-    <ClInclude Include="GestionarClase.h" />
+    <ClInclude Include="GestionarHorario.h" />
     <ClInclude Include="GestionarProfe.h" />
     <ClInclude Include="IArchivable.h" />
     <ClInclude Include="Inscripciones.h" />
@@ -156,13 +157,14 @@
     <ClCompile Include="Alumno.cpp" />
     <ClCompile Include="AlumnosArchivo.cpp" />
     <ClCompile Include="ActividadesArchivo.cpp" />
-    <ClCompile Include="DiaHoraArchivo.cpp" />
+    <ClCompile Include="HorarioArchivo.cpp" />
     <ClCompile Include="DiaHorario.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="FuncionesFiltrado.cpp" />
+    <ClCompile Include="GestionarActividad.cpp" />
     <ClCompile Include="GestionarAlumno.cpp" />
-    <ClCompile Include="GestionarClase.cpp" />
+    <ClCompile Include="GestionarHorario.cpp" />
     <ClCompile Include="GestionarProfe.cpp" />
     <ClCompile Include="Inscripciones.cpp" />
     <ClCompile Include="InscripcionesArchivo.cpp" />
