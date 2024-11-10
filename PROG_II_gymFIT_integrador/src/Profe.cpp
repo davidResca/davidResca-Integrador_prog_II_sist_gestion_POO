@@ -23,7 +23,7 @@ void Profe::setIdProfe(int idProfe)
 }
 
 // getters
-int Profe::getIdProfe() const {
+int Profe::getId() const {
 	return _idProfe;
 }
 float Profe::getSalarioHora() const {
@@ -33,7 +33,7 @@ float Profe::getSalarioHora() const {
 // interfaz
 void Profe::mostrar() {
 	Empleado::mostrar();
-	std::cout << "id profe: " << getIdProfe() << std::endl;
+	std::cout << "id profe: " << getId() << std::endl;
 	std::cout << "Salario por hora: " << getSalarioHora() << std::endl;
 }
 

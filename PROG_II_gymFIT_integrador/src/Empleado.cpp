@@ -38,6 +38,7 @@ void Empleado::setObservaciones(std::string observaciones)
 	strcpy_s(_observaciones, sizeof(_observaciones), observaciones.c_str());
 }
 
+
 // getters
 Fecha Empleado::getFechaAlta() const
 {

@@ -1,15 +1,19 @@
 #pragma once
-
 #include "Profe.h"
-#include "ProfesArchivo.h"
+#include "ProfesArchivo.h" 
+#include "Utilidades.h"
 
-class GestionarProfe
+class GestionarProfesor
 {
 public:
-	GestionarProfe();
+    GestionarProfesor();
+    Profe cargarProfesor();
+    void altaProfesor();
+    void bajaProfesor();
+    void listarProfesores();
+    void buscarProfesor();
 
 private:
-	ProfesArchivo archivoProfe;
-	int obtenerIdNuevo();
+    ProfesArchivo archivoProfesores;
+    int obtenerIdNuevo();
 };
-

@@ -58,7 +58,7 @@ void verListaProfesPorClase(int idClase) {
             for (int x = 0; x < profesArchivo.contarRegistros(); x++) {
                 profesor = profesArchivo.leerRegistro(x);
 
-                if (profesor.getIdProfe() == clase.getIdProfe()) {
+                if (profesor.getId() == clase.getIdProfe()) {
                     profesor.mostrar();
                     break;
                 }

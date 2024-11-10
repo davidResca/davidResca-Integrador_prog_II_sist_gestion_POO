@@ -158,7 +158,7 @@
     <ClCompile Include="AlumnosArchivo.cpp" />
     <ClCompile Include="ActividadesArchivo.cpp" />
     <ClCompile Include="HorarioArchivo.cpp" />
-    <ClCompile Include="DiaHorario.cpp" />
+    <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="FuncionesFiltrado.cpp" />

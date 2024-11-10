@@ -43,6 +43,11 @@ void Persona::setTelefono(long long telefono) {
 	_telefono = telefono;
 }
 
+void Persona::setEstado(bool estado) {
+	_estado = estado;
+}
+
+
 // getters
 std::string Persona::getNombre() const {
 	return _nombre;
@@ -62,6 +67,13 @@ int Persona::getEdad() const {
 std::string Persona::getCorreoElectronico() const {
 	return _correoElectronico;
 }
+
+bool Persona::getEstado() const {
+	return _estado;
+}
+
+
+//Metodos
 void Persona::mostrarPersona() const {
 	std::cout << std::endl;
 	std::cout << "Nombre: " << getNombre() << std::endl;

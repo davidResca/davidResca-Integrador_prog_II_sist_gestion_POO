@@ -15,7 +15,7 @@ public:
     void setIdProfe(int idProfe);
 
     //getters
-    int getIdProfe() const;
+    int getId() const;
     float getSalarioHora() const;
   
     // interfaz

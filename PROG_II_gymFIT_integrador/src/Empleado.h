@@ -10,6 +10,7 @@ private:
 	float _horasTrabajadas;
 	long long _CUIT;
 	char _observaciones[200];
+	bool _estado;
 public:
 	// constructor
 	Empleado();

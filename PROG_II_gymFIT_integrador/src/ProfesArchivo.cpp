@@ -63,7 +63,7 @@ int ProfesArchivo::buscar(int id) const {
 		return -2;
 	}
 	while (fread(&reg, _tamReg, 1, pProfes) == 1) {
-		if (reg.getIdProfe() == id) { 
+		if (reg.getId() == id) { 
 			fclose(pProfes);
 			return pos;
 		}

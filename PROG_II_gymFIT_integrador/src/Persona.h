@@ -13,6 +13,7 @@ private:
 	char _correoElectronico[100];
 	char _direccion[150];
 	long long _telefono;
+	bool _estado;
 public:
 	Persona();
 	Persona(std::string nombre, std::string apellido, long long dni, int edad, int dia, int mes, int anio, std::string correoElectronico, std::string direccion, long long telefono);
@@ -34,6 +35,10 @@ public:
 	std::string getCorreoElectronico() const;
 	std::string getDireccion();
 	long long getTelefono();
+	bool getEstado() const;
+
+	// setters
+	void setEstado(bool estado);
 
 	// interfaz
 	void mostrarPersona() const;

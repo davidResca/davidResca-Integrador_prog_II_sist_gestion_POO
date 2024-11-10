@@ -143,7 +143,7 @@
     <ClCompile Include="HorarioArchivo.cpp">
       <Filter>Archivos de origen\Gestion Archivos</Filter>
     </ClCompile>
-    <ClCompile Include="DiaHorario.cpp">
+    <ClCompile Include="Horario.cpp">
       <Filter>Archivos de origen\Entidades</Filter>
     </ClCompile>
     <ClCompile Include="FuncionesFiltrado.cpp">
