@@ -8,7 +8,6 @@ private:
 	char _nombre[100];
 	char _apellido[100];
 	long long _DNI;
-	int _edad;
 	Fecha _fechaNacimiento;
 	char _correoElectronico[100];
 	char _direccion[150];
@@ -16,7 +15,7 @@ private:
 	bool _estado;
 public:
 	Persona();
-	Persona(std::string nombre, std::string apellido, long long dni, int edad, int dia, int mes, int anio, std::string correoElectronico, std::string direccion, long long telefono);
+	Persona(std::string nombre, std::string apellido, long long dni, int dia, int mes, int anio, std::string correoElectronico, std::string direccion, long long telefono);
 	
 	// setters
 	void setNombre(std::string nombre);
@@ -31,7 +30,6 @@ public:
 	std::string getApellido() const;
 	long long getDNI() const;
 	Fecha getFechaNacimiento() const;
-	int getEdad() const;
 	std::string getCorreoElectronico() const;
 	std::string getDireccion();
 	long long getTelefono();

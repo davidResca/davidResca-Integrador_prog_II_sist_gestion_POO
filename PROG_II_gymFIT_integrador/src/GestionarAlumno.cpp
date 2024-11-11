@@ -46,7 +46,7 @@ bool GestionarAlumno::esIdMembresiaValido(int idMembresia) {
 Alumno GestionarAlumno::cargarAlumno()
 {
     std::string nombre, apellido, correoElectronico, direccion;
-    int dni, edad, diaNasc, mesNasc, anioNasc, diaInsc, mesInsc, anioInsc, idMembresia;
+    int dni, diaNasc, mesNasc, anioNasc, diaInsc, mesInsc, anioInsc, idMembresia;
     long long telefono;
     bool estado;
 
@@ -69,13 +69,6 @@ Alumno GestionarAlumno::cargarAlumno()
         std::string dniStr = std::to_string(dni);
         if (!soloNumeros(dniStr) || !tienelongitud(dniStr, 8)) std::cout << "DNI Invalido. Debe ser 8 digitos numericos" << std::endl;
     } while (!soloNumeros(std::to_string(dni)) || !tienelongitud(std::to_string(dni), 8));
-
-
-    do {
-        std::cout << "Ingrese edad: ";
-        std::cin >> edad;
-        if (!soloNumeros(std::to_string(edad))) std::cout << "Caracter Invalido. La Edad debe contener solo numeros" << std::endl;
-    } while (!soloNumeros(std::to_string(edad)));
 
 
     std::cout << "Ingrese fecha de nacimiento (dia - mes - anio): ";
@@ -118,7 +111,7 @@ Alumno GestionarAlumno::cargarAlumno()
     } while (estado != 0 && estado != 1);
 
 
-    Alumno nuevoAlumno(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico,
+    Alumno nuevoAlumno(nombre, apellido, dni, diaNasc, mesNasc, anioNasc, correoElectronico,
         idAlumno, diaInsc, mesInsc, anioInsc, idMembresia, estado, direccion, telefono);
 
     return nuevoAlumno;

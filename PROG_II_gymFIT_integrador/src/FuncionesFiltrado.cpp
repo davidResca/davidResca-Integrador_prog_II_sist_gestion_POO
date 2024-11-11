@@ -236,7 +236,7 @@ void altaProfe() {
     std::cout << "Salario a cobrar por hora: " << std::endl;
     std::cin >> salarioHora;
 
-    profeNuevo = Profe(nombre, apellido, dni, edad, diaNac, mesNac, anioNac, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones, idProfe, salarioHora, direccion, telefono);
+    profeNuevo = Profe(nombre, apellido, dni, diaNac, mesNac, anioNac, correoElectronico, diaAlta, mesAlta, anioAlta, horasTrabajadas, CUIT, observaciones, idProfe, salarioHora, direccion, telefono);
 
     system("cls");
     int guardaRegistro;

@@ -59,7 +59,7 @@ Profe GestionarProfesor::cargarProfesor() {
     cout << "Ingrese el telefono del profesor: ";
     cin >> telefono;
 
-    Profe nuevoProfesor(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc,
+    Profe nuevoProfesor(nombre, apellido, dni, diaNasc, mesNasc, anioNasc,
         correoElectronico, diaAlta, mesAlta, anioAlta,
         horasTrabajadas, CUIT, observaciones, idProfe,
         salarioHora, direccion, telefono);
