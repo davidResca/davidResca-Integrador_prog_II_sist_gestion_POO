@@ -7,6 +7,8 @@
 #include "ProfesArchivo.h"
 #include "AlumnosArchivo.h"
 #include "HorarioArchivo.h"
+#include "Inscripciones.h"
+#include "InscripcionesArchivo.h"
 
 
 //Gestión de clases
@@ -21,6 +23,8 @@ void altaClase();
 
 //Gestión de alumnos
 void buscarAlumno(int idAlumno);
+void buscarAlumnoporNombre(const std::string& nombre);
+void buscarInscripcionesPorAlumno(int idAlumno);
 
 /*
 void verCantidadInscriptosClase(int idClase);
@@ -39,12 +43,7 @@ void filtrarClasesPorDia(const std::string& dia);
 		void filtrarClasesPorSala(int idSala);
 		void filtrarClasesPorDia(int idClase);
 		void verCantidadInscriptosClase(int idClase);
-		void verListaProfesPorClase(int idClase);
-		void verListadoTotalProfesores();
-		void buscarAlumno(int idAlumno);
-		void buscarProfe(int IdProfe);
 
-	- Validaciones de datos.
 
 
 */
