@@ -12,13 +12,13 @@ public:
 	void procesarOpcion(int opcion);
 private:
 	GestionarAlumno gestorAlumnos;
-	//GestionarProfe gestorProfe;
+	GestionarProfesor gestorProfe;
 	GestionarActividad gestorActividades;
-	//GestionarHorario gestorHorarios;
+	GestionarHorario gestorHorarios;
 
 	void gestionarAlumnos();
-	//void gestionarProfes();
+	void gestionarProfes();
 	void gestionarActividades();
-	//void gestionarHorarios();
+	void gestionarHorarios();
 };
 

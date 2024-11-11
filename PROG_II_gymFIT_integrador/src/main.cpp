@@ -25,7 +25,6 @@ int main() {
 
     do {
         menu.mostrarMenu();
-        cout << "Seleccione una opción: ";
         cin >> opcion;
         menu.procesarOpcion(opcion);
     } while (opcion != 0);

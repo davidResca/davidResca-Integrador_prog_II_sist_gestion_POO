@@ -19,11 +19,14 @@ void Menu::procesarOpcion(int opcion) {
         gestionarAlumnos();
         break;
     case 2:
-        //gestionarProfes();
+        gestionarProfes();
         break;
     case 3:
         gestionarActividades();
         break;
+    case 4:
+        gestionarHorarios();
+		break;
     case 0:
         cout << "Saliendo..." << endl;
         break;
@@ -70,43 +73,44 @@ void Menu::gestionarAlumnos() {
     } while (opcion != 0);
 }
 
-//void Menu::gestionarProfes() {
-//    int opcion;
-//    do {
-//        cout << "\n===== GESTION DE PROFESORES =====\n";
-//        cout << "1. Alta de Profesor\n";
-//        cout << "2. Baja de Profesor\n";
-//        cout << "3. Modificar Profesor\n";
-//        cout << "4. Buscar Profesor\n";
-//        cout << "5. Listar Profesores\n";
-//        cout << "0. Volver al Menu Principal\n";
-//        cout << "Seleccione una opcion: ";
-//        cin >> opcion;
-//
-//        switch (opcion) {
-//        case 1:
-//            gestorProfe.altaProfesor();
-//            break;
-//        case 2:
-//            gestorProfe.bajaProfesor();
-//            break;
-//        case 3:
-//            //gestorProfesores.modificarProfesor();
-//            break;
-//        case 4:
-//            gestorProfesores.buscarProfesor();
-//            break;
-//        case 5:
-//            gestorProfesores.listarProfesores();
-//            break;
-//        case 0:
-//            cout << "Volviendo al menu principal...\n";
-//            break;
-//        default:
-//            cout << "Opcion no valida, intente nuevamente.\n";
-//        }
-//    } while (opcion != 0);
-//}
+void Menu::gestionarProfes() {
+    int opcion;
+    do {
+        cout << "\n===== GESTION DE PROFESORES =====\n";
+        cout << "1. Alta de Profesor\n";
+        cout << "2. Baja de Profesor\n";
+        cout << "3. Modificar Profesor\n";
+        cout << "4. Buscar Profesor\n";
+        cout << "5. Listar Profesores\n";
+        cout << "0. Volver al Menu Principal\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            gestorProfe.altaProfesor();
+            break;
+        case 2:
+            gestorProfe.bajaProfesor();
+            break;
+        case 3:
+            //gestorProfe.modificarProfesor();
+            std::cout << "No implementado" << std::endl;
+            break;
+        case 4:
+            gestorProfe.buscarProfesor();
+            break;
+        case 5:
+            gestorProfe.listarProfesores();
+            break;
+        case 0:
+            cout << "Volviendo al menu principal...\n";
+            break;
+        default:
+            cout << "Opcion no valida, intente nuevamente.\n";
+        }
+    } while (opcion != 0);
+}
 
 
 void Menu::gestionarActividades() {
@@ -148,41 +152,41 @@ void Menu::gestionarActividades() {
 }
 
 
-//
-//void Menu::gestionarHorarios() {
-//    int opcion;
-//    do {
-//        cout << "\n===== GESTION DE HORARIOS =====\n";
-//        cout << "1. Alta de Horario\n";
-//        cout << "2. Baja de Horario\n";
-//        cout << "3. Modificar Horario\n";
-//        cout << "4. Buscar Horario\n";
-//        cout << "5. Listar Horarios\n";
-//        cout << "0. Volver al Menu Principal\n";
-//        cout << "Seleccione una opcion: ";
-//        cin >> opcion;
-//
-//        switch (opcion) {
-//        case 1:
-//            gestorHorarios.altaHorario();
-//            break;
-//        case 2:
-//            gestorHorarios.bajaHorario();
-//            break;
-//        case 3:
-//            //gestorHorarios.modificarHorario();
-//            break;
-//        case 4:
-//            gestorHorarios.buscarHorario();
-//            break;
-//        case 5:
-//            gestorHorarios.listarHorarios();
-//            break;
-//        case 0:
-//            cout << "Volviendo al menu principal...\n";
-//            break;
-//        default:
-//            cout << "Opcion no valida, intente nuevamente.\n";
-//        }
-//    } while (opcion != 0);
-//}
+
+void Menu::gestionarHorarios() {
+    int opcion;
+    do {
+        cout << "\n===== GESTION DE HORARIOS =====\n";
+        cout << "1. Alta de Horario\n";
+        cout << "2. Baja de Horario\n";
+        cout << "3. Modificar Horario\n";
+        cout << "4. Buscar Horario\n";
+        cout << "5. Listar Horarios\n";
+        cout << "0. Volver al Menu Principal\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            gestorHorarios.altaHorario();
+            break;
+        case 2:
+            gestorHorarios.bajaHorario();
+            break;
+        case 3:
+            //gestorHorarios.modificarHorario();
+            break;
+        case 4:
+            gestorHorarios.buscarHorario();
+            break;
+        case 5:
+            gestorHorarios.listarHorarios();
+            break;
+        case 0:
+            cout << "Volviendo al menu principal...\n";
+            break;
+        default:
+            cout << "Opcion no valida, intente nuevamente.\n";
+        }
+    } while (opcion != 0);
+}
