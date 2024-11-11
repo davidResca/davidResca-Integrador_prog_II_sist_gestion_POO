@@ -24,12 +24,15 @@ Persona::Persona(std::string nombre, std::string apellido, long long dni, int ed
 
 // setters
 void Persona::setNombre(std::string nombre) {
+	if (nombre.empty()) throw std::invalid_argument("El Nombre no puede estar vacio");
 	strcpy_s(_nombre, sizeof(_nombre), nombre.c_str());
 }
 void Persona::setApellido(std::string apellido) {
+	if (apellido.empty()) throw std::invalid_argument("El Apellido no puede estar vacio");
 	strcpy_s(_apellido, sizeof(_apellido), apellido.c_str());
 }
 void Persona::setDNI(long long dni) {
+	if (dni < 10000000LL || dni > 99999999LL) throw std::invalid_argument("El DNI debe tener exactamente 8 digitos");
 	_DNI = dni;
 }
 void Persona::setCorreoElectronico(std::string correoElectronico) {
@@ -40,9 +43,9 @@ void Persona::setDireccion(std::string direccion) {
 	strcpy_s(_direccion, sizeof(_direccion), direccion.c_str());
 }
 void Persona::setTelefono(long long telefono) {
+	if (telefono < 1000000000LL || telefono > 9999999999LL) throw std::invalid_argument("El N° de Telefono debe tener exactamente 10 digitos");
 	_telefono = telefono;
 }
-
 void Persona::setEstado(bool estado) {
 	_estado = estado;
 }

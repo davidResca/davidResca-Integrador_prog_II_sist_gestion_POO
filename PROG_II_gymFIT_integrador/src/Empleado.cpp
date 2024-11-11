@@ -20,24 +20,24 @@ Empleado::Empleado(std::string nombre, std::string apellido, long long dni, int 
 }
 
 // setters
-void Empleado::setFechaAlta(int dia, int mes, int anio)
-{
+void Empleado::setFechaAlta(int dia, int mes, int anio) {
 	_fechaAlta = Fecha(dia, mes, anio);
 }
-void Empleado::setHorasTrabajadas(float horas)
-{
+void Empleado::setHorasTrabajadas(float horas) {
+	if (horas < 0) throw std::invalid_argument("Las horas trabajadas no pueden ser negativas");
 	_horasTrabajadas = horas;
 }
-void Empleado::setCUIT(long long CUIT)
-{
+void Empleado::setCUIT(long long CUIT) {
+	// Esta validacion sirve para indicarle al compilador que el numero debe tratarse como un long long, el LL se utiliza para indicar que un n° literal es tipo long long.
+	if (CUIT < 100000000000LL || CUIT > 99999999999LL) throw std::invalid_argument("El CUIT debe tener exactamente 11 digitos");
 	_CUIT = CUIT;
 }
 
-void Empleado::setObservaciones(std::string observaciones)
-{
+void Empleado::setObservaciones(std::string observaciones) {
+	if (observaciones.empty()) throw std::invalid_argument("Las Observaciones no pueden estar vacias");
+	if (observaciones.size() >= sizeof(_observaciones)) throw std::invalid_argument("Las Observaciones exceden el tamaño permitido");
 	strcpy_s(_observaciones, sizeof(_observaciones), observaciones.c_str());
 }
-
 
 // getters
 Fecha Empleado::getFechaAlta() const

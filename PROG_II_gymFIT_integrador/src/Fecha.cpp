@@ -50,11 +50,12 @@ void Fecha::validarIngreso(int dia, int mes, int anio) {
     bool mesValido = esMesValido(mes);
     bool anioValido = esAnioValido(anio);
 
-    //if (!diaValido || !mesValido || !anioValido) {
-    //    setFechaDefault();
-    //    throw std::invalid_argument("Mensaje de error");
-    //}
+    if (!diaValido || !mesValido || !anioValido) {
+        setFechaDefault();
+        throw std::invalid_argument("Mensaje de error");
+    }
 }
+
 bool Fecha::esAnioValido(int anio) {
     bool anioValido = false;
     if (anio >= 1) {

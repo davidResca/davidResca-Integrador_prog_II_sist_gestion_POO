@@ -12,6 +12,7 @@ public:
 	void bajaAlumno();
 	void listarAlumnos();
 	void buscarAlumno();
+	bool esIdMembresiaValido(int idMembresia);
 
 private:
 	ArchivoAlumnos archivoAlumnos;

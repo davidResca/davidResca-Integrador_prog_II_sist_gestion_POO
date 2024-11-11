@@ -13,12 +13,12 @@ Profe::Profe(std::string nombre, std::string apellido, long long dni, int edad, 
 }
 
 // setters
-void Profe::setSalarioHora(float salarioHora)
-{
+void Profe::setSalarioHora(float salarioHora) {
+	if (salarioHora < 0) throw std::invalid_argument("El Salario por Hora debe ser un numero positivo");
 	_salarioHora = salarioHora;
 }
-void Profe::setIdProfe(int idProfe)
-{
+void Profe::setIdProfe(int idProfe) {
+	if (idProfe < 0) throw std::invalid_argument("El ID del Profesor debe ser un numero positivo");
 	_idProfe = idProfe;
 }
 

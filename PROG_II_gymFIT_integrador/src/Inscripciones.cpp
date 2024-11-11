@@ -20,9 +20,11 @@ int Inscripciones::getIdHorario() {
 
 // setters
 void Inscripciones::setIdAlumno(int idAlumno) {
+	if (idAlumno < 0) throw std::invalid_argument("El ID del Alumno debe ser un numero positivo");
 	_idAlumno = idAlumno;
 }
 void Inscripciones::setIdHorario(int idHorario) {
+	if (idHorario < 0) throw std::invalid_argument("El ID del Horario debe ser un numero positivo");
 	_idHorario = idHorario;
 }
 

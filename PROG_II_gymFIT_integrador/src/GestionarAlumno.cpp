@@ -8,6 +8,41 @@
 
 GestionarAlumno::GestionarAlumno() : archivoAlumnos(sizeof(Alumno)) {}
 
+
+//Funcion para validar si una cadena contiene solo letras
+bool soloLetras(const std::string& str) {
+    for (char c : str) {
+        if (!std::isalpha(c)) return false;
+    }
+    return true;
+}
+
+//Funcion para validar si una cadena contiene solo numeros
+bool soloNumeros(const std::string& str) {
+    for (char c : str) {
+        if (!std::isdigit(c)) return false;
+    }
+    return true;
+}
+
+//Funcion para validar la longitud
+bool tienelongitud(const std::string& str, int longitud) {
+    return str.length() == longitud;
+}
+
+//Validar que el ID de Membresia no este registrado
+bool GestionarAlumno::esIdMembresiaValido(int idMembresia) {
+    int totalRegistros = archivoAlumnos.contarRegistros();
+    for (int i = 0; i < totalRegistros; ++i) {
+        Alumno alumno = archivoAlumnos.leerRegistro(i);
+        if (alumno.getIdMembresia() == idMembresia) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
 Alumno GestionarAlumno::cargarAlumno()
 {
     std::string nombre, apellido, correoElectronico, direccion;
@@ -15,17 +50,33 @@ Alumno GestionarAlumno::cargarAlumno()
     long long telefono;
     bool estado;
 
-    std::cout << "Ingrese nombre: ";
-    std::cin >> nombre;
+    do {
+        std::cout << "Ingrese nombre: ";
+        std::cin >> nombre;
+        if (!soloLetras(nombre)) std::cout << "Nombre Invalido. El nombre debe contener solo letras" << std::endl;
+    } while (!soloLetras(nombre));
 
-    std::cout << "Ingrese apellido: ";
-    std::cin >> apellido;
+    do {
+        std::cout << "Ingrese apellido: ";
+        std::cin >> apellido;
+        if (!soloLetras(apellido)) std::cout << "Apellido Invalido. El apellido debe contener solo letras" << std::endl;
+    } while (!soloLetras(apellido));
 
-    std::cout << "Ingrese DNI: ";
-    std::cin >> dni;
 
-    std::cout << "Ingrese edad: ";
-    std::cin >> edad;
+    do {
+        std::cout << "Ingrese DNI: ";
+        std::cin >> dni;
+        std::string dniStr = std::to_string(dni);
+        if (!soloNumeros(dniStr) || !tienelongitud(dniStr, 8)) std::cout << "DNI Invalido. Debe ser 8 digitos numericos" << std::endl;
+    } while (!soloNumeros(std::to_string(dni)) || !tienelongitud(std::to_string(dni), 8));
+
+
+    do {
+        std::cout << "Ingrese edad: ";
+        std::cin >> edad;
+        if (!soloNumeros(std::to_string(edad))) std::cout << "Caracter Invalido. La Edad debe contener solo numeros" << std::endl;
+    } while (!soloNumeros(std::to_string(edad)));
+
 
     std::cout << "Ingrese fecha de nacimiento (dia - mes - anio): ";
     std::cin >> diaNasc >> mesNasc >> anioNasc;
@@ -37,19 +88,35 @@ Alumno GestionarAlumno::cargarAlumno()
     std::cin.ignore();
     std::getline(std::cin, direccion);
 
-    std::cout << "Ingrese telefono: ";
-    std::cin >> telefono;
+    do {
+        std::cout << "Ingrese telefono: ";
+        std::cin >> telefono;
+        std::string telefonoStr = std::to_string(dni);
+        if (!soloNumeros(telefonoStr) || !tienelongitud(telefonoStr, 10)) std::cout << "Telefono Invalido. Debe ser 10 digitos numericos" << std::endl;
+    } while (!soloNumeros(std::to_string(telefono)) || !tienelongitud(std::to_string(telefono), 10));
+
 
     int idAlumno = obtenerIdNuevo();
 
     std::cout << "Ingrese fecha de inscripcion (dia mes anio): ";
     std::cin >> diaInsc >> mesInsc >> anioInsc;
 
-    std::cout << "Ingrese ID de membresia: ";
-    std::cin >> idMembresia;
 
-    std::cout << "El alumno esta activo? (1 = Si, 0 = No): ";
-    std::cin >> estado;
+    do {
+        std::cout << "Ingrese ID de membresia: ";
+        std::cin >> idMembresia;
+        while (!esIdMembresiaValido(idMembresia)) {
+            std::cout << "El ID de membresia ya esta registrado. Ingrese otro ID: ";
+            std::cin >> idMembresia;
+        }
+    } while (false);
+
+    do {
+        std::cout << "El alumno esta activo? (1 = Si, 0 = No): ";
+        std::cin >> estado;
+        if (estado != 0 && estado != 1) std::cout << "Opcion Invalida. Oprima 1 para Activo o 2 para Inactivo" << std::endl;
+    } while (estado != 0 && estado != 1);
+
 
     Alumno nuevoAlumno(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico,
         idAlumno, diaInsc, mesInsc, anioInsc, idMembresia, estado, direccion, telefono);

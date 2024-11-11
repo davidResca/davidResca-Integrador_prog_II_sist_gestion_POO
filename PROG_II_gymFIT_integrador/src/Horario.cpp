@@ -37,22 +37,25 @@ int Horario::getHoraFin() const {
 
 // setters
 void Horario::setId(int idHorario) {
+	if (idHorario <= 0) throw std::invalid_argument("El ID del Dia y Horario debe ser un numero positivo");
 	_idHorario = idHorario;
 }
 void Horario::setIdActividad(int idActividad) {
+	if (idActividad <= 0) throw std::invalid_argument("El ID de la Actividad debe ser un numero positivo");
 	_idActividad = idActividad;
 }
 void Horario::setDiaSemana(const std::string& diaSemana) {
+	if (diaSemana.empty()) throw std::invalid_argument("El dia de la Semana no puede estar vacio");
 	_diaSemana = convertirStringADia(diaSemana);
 }
-void Horario::setHoraInicio(int horaInicio)
-{
+void Horario::setHoraInicio(int horaInicio) {
+	if (horaInicio < 0 || horaInicio  > 23) throw std::invalid_argument("La hora de inicio debe estar entre las 0 y 23 horas");
 	_horaInicio = horaInicio;
 }
 void Horario::setHoraFin(int horaFin) {
+	if (horaFin < 0 || horaFin > 23) throw std::invalid_argument("La hora de fin debe estar entre las 0 y 23 horas");
 	_horaFin = horaFin;
 }
-
 void Horario::setEstado(bool estado) {
 	_estado = estado;
 }

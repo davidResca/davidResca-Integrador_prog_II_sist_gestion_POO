@@ -18,12 +18,14 @@ Alumno::Alumno(std::string nombre, std::string apellido, int dni, int edad, int 
 
 // setters
 void Alumno::setIdAlumno(int idAlumno) {
+	if (idAlumno <= 0) throw std::invalid_argument("El ID del Alumno debe ser un numero positivo");
 	_idAlumno = idAlumno;
 }
 void Alumno::setFechaInscripcion(int diaInsc, int mesInsc, int anioInsc) {
 	_fechaInscripcion = Fecha(diaInsc, mesInsc, anioInsc);
 }
 void Alumno::setIdMembresia(int idMembresia) {
+	if (idMembresia <= 0) throw std::invalid_argument("El ID de la Membresia debe ser un numero positivo");
 	_idMembresia = idMembresia;
 }
 void Alumno::setEstadoAlta(bool estado) {
@@ -44,45 +46,6 @@ bool Alumno::getEstado() const {
 	return _estado;
 }
 
-// interfaz
-//Alumno Alumno::cargar() {
-//	std::string nombre, apellido, correoElectronico;
-//	int dni, edad = 0, diaNasc, mesNasc, anioNasc, idAlumno, diaInsc, mesInsc, anioInsc, idMembresia;
-//	bool regular = true, estado = true;
-//
-//	std::cout << "Nombre: ";
-//	std::cin >> nombre;
-//	std::cout << "Apellido: ";
-//	std::cin >> apellido;
-//	std::cout << "DNI: ";
-//	std::cin >> dni;
-//	std::cout << "Fecha nacimiento: " << std::endl;
-//	std::cout << "DIA: ";
-//	std::cin >> diaNasc;
-//	std::cout << "MES: ";
-//	std::cin >> anioNasc;
-//	std::cout << "ANIO: ";
-//	std::cin >> mesNasc;
-//	std::cout << "Correo electronico: ";
-//	std::cin >> correoElectronico;
-//	std::cout << "Legajo: ";
-//	std::cin >> idAlumno;
-//	std::cout << "Fecha alta: " << std::endl;
-//	std::cout << "DIA: ";
-//	std::cin >> diaInsc;
-//	std::cout << "MES: ";
-//	std::cin >> mesInsc;
-//	std::cout << "ANIO: ";
-//	std::cin >> anioInsc;
-//	std::cout << "Id membresia: ";
-//	std::cin >> idMembresia;
-//	std::cout << std::endl;
-//
-//	Alumno alumnoNuevo(nombre, apellido, dni, edad, diaNasc, mesNasc, anioNasc, correoElectronico, idAlumno, diaInsc, mesInsc, anioInsc, true, idMembresia, true);
-//
-//	return std::move(alumnoNuevo);
-//	// Copy Elision - ver también "Return Value Optimization" - RVO
-//}
 void Alumno::mostrar() {
 	if (_estado) {
 		std::cout << "------------ " << "ALUMNO: " << getId () << " ------------" << std::endl;
