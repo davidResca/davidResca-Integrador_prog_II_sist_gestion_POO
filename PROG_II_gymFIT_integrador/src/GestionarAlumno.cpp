@@ -48,7 +48,7 @@ Alumno GestionarAlumno::cargarAlumno()
     std::string nombre, apellido, correoElectronico, direccion;
     int dni, diaNasc, mesNasc, anioNasc, diaInsc, mesInsc, anioInsc, idMembresia;
     long long telefono;
-    bool estado;
+    bool estado = true;
 
     do {
         std::cout << "Ingrese nombre: ";
@@ -84,7 +84,7 @@ Alumno GestionarAlumno::cargarAlumno()
     do {
         std::cout << "Ingrese telefono: ";
         std::cin >> telefono;
-        std::string telefonoStr = std::to_string(dni);
+        std::string telefonoStr = std::to_string(telefono);
         if (!soloNumeros(telefonoStr) || !tienelongitud(telefonoStr, 10)) std::cout << "Telefono Invalido. Debe ser 10 digitos numericos" << std::endl;
     } while (!soloNumeros(std::to_string(telefono)) || !tienelongitud(std::to_string(telefono), 10));
 
@@ -103,13 +103,6 @@ Alumno GestionarAlumno::cargarAlumno()
             std::cin >> idMembresia;
         }
     } while (false);
-
-    do {
-        std::cout << "El alumno esta activo? (1 = Si, 0 = No): ";
-        std::cin >> estado;
-        if (estado != 0 && estado != 1) std::cout << "Opcion Invalida. Oprima 1 para Activo o 2 para Inactivo" << std::endl;
-    } while (estado != 0 && estado != 1);
-
 
     Alumno nuevoAlumno(nombre, apellido, dni, diaNasc, mesNasc, anioNasc, correoElectronico,
         idAlumno, diaInsc, mesInsc, anioInsc, idMembresia, estado, direccion, telefono);
