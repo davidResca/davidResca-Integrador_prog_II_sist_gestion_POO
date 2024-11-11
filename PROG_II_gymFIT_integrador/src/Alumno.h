@@ -13,18 +13,16 @@ private:
 public:
 	// constructor
 	Alumno();
-	Alumno(std::string nombre, std::string apellido, int dni, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, int idMembresia, bool estado, std::string direccion, long long telefono);
+	Alumno(std::string nombre, std::string apellido, int dni, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, bool estado, std::string direccion, long long telefono);
 
 	// setters
 	void setIdAlumno(int idAlumno);
 	void setFechaInscripcion(int diaInsc, int mesInsc, int anioInsc);
-	void setIdMembresia(int id);
 	void setEstadoAlta(bool estado);
 
 	// getters 
 	Fecha getFechaInscripcion() const;
 	int getId() const;
-	int getIdMembresia () const;
 	bool getEstado() const;
 
 	// interfaz

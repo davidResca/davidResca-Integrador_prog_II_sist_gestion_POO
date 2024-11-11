@@ -30,18 +30,6 @@ bool tienelongitud(const std::string& str, int longitud) {
     return str.length() == longitud;
 }
 
-//Validar que el ID de Membresia no este registrado
-bool GestionarAlumno::esIdMembresiaValido(int idMembresia) {
-    int totalRegistros = archivoAlumnos.contarRegistros();
-    for (int i = 0; i < totalRegistros; ++i) {
-        Alumno alumno = archivoAlumnos.leerRegistro(i);
-        if (alumno.getIdMembresia() == idMembresia) {
-            return false;
-        }
-    }
-    return true;
-}
-
 
 Alumno GestionarAlumno::cargarAlumno()
 {
@@ -95,17 +83,8 @@ Alumno GestionarAlumno::cargarAlumno()
     std::cin >> diaInsc >> mesInsc >> anioInsc;
 
 
-    do {
-        std::cout << "Ingrese ID de membresia: ";
-        std::cin >> idMembresia;
-        while (!esIdMembresiaValido(idMembresia)) {
-            std::cout << "El ID de membresia ya esta registrado. Ingrese otro ID: ";
-            std::cin >> idMembresia;
-        }
-    } while (false);
-
     Alumno nuevoAlumno(nombre, apellido, dni, diaNasc, mesNasc, anioNasc, correoElectronico,
-        idAlumno, diaInsc, mesInsc, anioInsc, idMembresia, estado, direccion, telefono);
+        idAlumno, diaInsc, mesInsc, anioInsc, estado, direccion, telefono);
 
     return nuevoAlumno;
 }

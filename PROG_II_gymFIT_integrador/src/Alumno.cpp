@@ -7,12 +7,11 @@ Alumno::Alumno() : Persona() {
 	_idMembresia = -1;
 	_estado = false;
 }
-Alumno::Alumno(std::string nombre, std::string apellido, int dni, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, int idMembresia, bool estado, std::string direccion, long long telefono)
+Alumno::Alumno(std::string nombre, std::string apellido, int dni, int diaNasc, int mesNasc, int anioNasc, std::string correoElectronico, int idAlumno, int diaInsc, int mesInsc, int anioInsc, bool estado, std::string direccion, long long telefono)
 	: Persona(nombre, apellido, dni, diaNasc, mesNasc, anioNasc, correoElectronico, direccion, telefono)
 {
 	_idAlumno = idAlumno;
 	Fecha _fechaInscripcion(diaInsc, mesInsc, anioInsc);
-	_idMembresia = idMembresia;
 	_estado = estado;
 }
 
@@ -23,10 +22,6 @@ void Alumno::setIdAlumno(int idAlumno) {
 }
 void Alumno::setFechaInscripcion(int diaInsc, int mesInsc, int anioInsc) {
 	_fechaInscripcion = Fecha(diaInsc, mesInsc, anioInsc);
-}
-void Alumno::setIdMembresia(int idMembresia) {
-	if (idMembresia <= 0) throw std::invalid_argument("El ID de la Membresia debe ser un numero positivo");
-	_idMembresia = idMembresia;
 }
 void Alumno::setEstadoAlta(bool estado) {
 	_estado = estado;
@@ -39,9 +34,6 @@ Fecha Alumno::getFechaInscripcion() const {
 int Alumno::getId() const {
 	return _idAlumno;
 }
-int Alumno::getIdMembresia() const {
-	return _idMembresia;
-}
 bool Alumno::getEstado() const {
 	return _estado;
 }
@@ -52,8 +44,6 @@ void Alumno::mostrar() {
 		Persona::mostrarPersona();
 		std::cout << "ID ALUMNO: " << getId () << std::endl;
 		std::cout << "FECHA DE INSCRIPCION: " << getFechaInscripcion() << std::endl;
-		std::cout << "CARRERA: " << getIdMembresia() << std::endl;
-
 		std::string infoEstado = getEstado() ? "ACTIVO" : "INACTIVO";
 		std::cout << "Estado regular: " << infoEstado << std::endl;
 
