@@ -11,7 +11,7 @@ GestionarProfesor::GestionarProfesor()
 Profe GestionarProfesor::cargarProfesor() {
     string nombre, apellido, correoElectronico, observaciones, direccion;
     long long dni, CUIT, telefono;
-    int edad, diaNasc, mesNasc, anioNasc, diaAlta, mesAlta, anioAlta, idProfe;
+    int diaNasc, mesNasc, anioNasc, diaAlta, mesAlta, anioAlta, idProfe;
     float horasTrabajadas, salarioHora;
 
     cout << "Ingrese el nombre del profesor: ";
@@ -24,8 +24,6 @@ Profe GestionarProfesor::cargarProfesor() {
     cout << "Ingrese el DNI del profesor: ";
     cin >> dni;
 
-    cout << "Ingrese la edad del profesor: ";
-    cin >> edad;
 
     cout << "Ingrese la fecha de nacimiento (dia mes anio): ";
     cin >> diaNasc >> mesNasc >> anioNasc;
@@ -86,7 +84,7 @@ void GestionarProfesor::bajaProfesor() {
     int pos = archivoProfesores.buscar(id);
     if (pos >= 0) {
         Profe profesor = archivoProfesores.leerRegistro(pos);
-        profesor.setEstado(false); // Realiza una baja lógica, marcando al profesor como inactivo
+        profesor.setEstado(false); 
 
         if (archivoProfesores.modificarRegistro(profesor, pos)) {
             cout << "Profesor dado de baja exitosamente.\n";
