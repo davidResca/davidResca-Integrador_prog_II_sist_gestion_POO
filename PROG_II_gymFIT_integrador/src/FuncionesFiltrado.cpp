@@ -125,6 +125,57 @@ void buscarAlumno(int idAlumno) {
     }
 }
 
+void buscarAlumnoporNombre(const std::string& nombre) {
+    ArchivoAlumnos alumnoArchivos(sizeof(Alumno));
+    int totalAlumnos = alumnoArchivos.contarRegistros();
+    bool encontrado = false;
+
+    if (totalAlumnos == 0) {
+        std::cout << "No hay alumnos registrados en el sistema." << std::endl;
+        return;
+    }
+
+    std::cout << "Alumnos con el nombre: " << nombre << std::endl;
+
+    for (int i = 0; i < totalAlumnos; i++) {
+        Alumno alumno = alumnoArchivos.leerRegistro(i);
+        // Convertir a minusculas para una comparacion insensible x las dudas.
+        std::string nombreAlumno = alumno.getNombre();
+        std::transform(nombre.begin(), nombre.end(), nombreAlumno.begin(), ::tolower);
+        std::transform(nombreAlumno.begin(), nombreAlumno.end(), nombreAlumno.begin(), ::tolower);
+
+        if (nombreAlumno == nombre) {
+            alumno.mostrar();
+            encontrado = true;
+        }
+    }
+
+    if (!encontrado) std::cout << "No se encontrar alumnos con el nombre: " << nombre << std::endl;
+}
+
+void buscarInscripcionesPorAlumno(int idAlumno) {
+    InscripcionesArchivo archivoInscripciones(sizeof(Inscripciones));
+    int totalInscripciones = archivoInscripciones.contarRegistros();
+    bool encontrado = false;
+
+    if (totalInscripciones == 0) {
+        std::cout << "No hay Inscripciones a Actividades registradas en el sistema. " << std::endl;
+        return;
+    }
+
+    std::cout << "Inscripciones a Actividades para el Alumno con ID: " << idAlumno << std::endl;
+
+    for (int i = 0; i < totalInscripciones; i++) {
+        Inscripciones inscripcion = archivoInscripciones.leerRegistro(i);
+        if (inscripcion.getIdAlumno() == idAlumno) {
+            inscripcion.mostrar();
+            encontrado = true;
+        }
+    }
+
+    if (!encontrado) std::cout << "No se encontrar Inscripciones a Actividades para el Alumno con ID: " << idAlumno << std::endl;
+}
+
 void altaProfe() {
     ProfesArchivo profesArchivo(sizeof(Profe));
     Profe profeNuevo;
